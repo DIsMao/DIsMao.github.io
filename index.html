@@ -193,23 +193,7 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-.box4 iframe:nth-of-type(1) {
-margin: 30px;
-align-content: center
-}
-.box4 iframe:nth-of-type(2) {
-margin: 30px;
-align-content: center
-}
-.box4 iframe:nth-of-type(3) {
+.box4 iframe {
 margin: 30px;
 
 align-content: center
@@ -232,26 +216,21 @@ align-content: center
   
   
 position: relative;
-flex-basis: 1000px;
+
 line-height: 100px; /* задаем высоту строки */
 
 text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
 text-align : center;
-
+border-radius: 60px 60px 60px / 50px 50px;
 }
 
+.box4 hi2 {
+  height: 40px;
+  font-size: calc(0.2em + 4vw); 
+  text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
+text-align : center;
 
-
-
-
-
-.game-gba-platform {	width: 600px;	height: 450px;	background:grey;	margin: 0 auto;	}	.game-gbc-platform , .game-gb-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-snes-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-nes-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-sega-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-neo-geo-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-n64-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}	.game-nds-platform, .game-ps1-platform, .game-master-platform, .game-gear-platform, .game-saturn-platform, .game-cps1-platform, .game-cps2-platform, .game-cps3-platform, .game-retro-platform, .game-vb-platform, .game-tg16-platform, .game-3do-platform, .game-wswan-platform, .game-msx-platform, .game-2600-platform, .game-lynx-platform, .game-jaguar-platform, .game-ngp-platform, .game-mame-platform {	width: 640px;	height: 480px;	background:grey;	margin: 0 auto;	}
-
-
-
-
-
-
+}
 
 
 </style>
@@ -286,9 +265,6 @@ text-align : center;
     </div>
   </header>
 
- 
-
-  
 <div class="box1" onclick="window.location.href = 'https://www.youtube.com/watch?v=qYODdZUahxA';" >
   
   
@@ -303,15 +279,23 @@ text-align : center;
 <div class="box4" >
   <iframe width="1200" height="675" src="https://www.youtube.com/embed/2w2ZxDgCxHE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   <div>
-    <h1>Final fantasy</h1>
+    <hi2 class="box4">Final fantasy</hi2>
+  
   <iframe src="https://www.retrogames.cc/embed/28795-final-fantasy-i-ii-dawn-of-souls-u-independent.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
 </div>
+
 <div>
-  <h1>doom</h1>
+  <hi2 class="box4">DOOM</hi2>
   <iframe src="https://www.retrogames.cc/embed/41739-doom.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
 </div>
 
-
-
+<div>
+  <hi2 class="box4" width="600" >Kingdom Hearts Re</hi2>
+  <iframe src="https://www.retrogames.cc/embed/41847-kingdom-hearts-re-coded-europe-en-fr-de-es-it.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+</div>
+<div>
+  <hi2 class="box4">Kingdom Hearts 358</hi2>
+  <iframe src="https://www.retrogames.cc/embed/39401-kingdom-hearts-358-2-days-europe-en-fr-de-es-it.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe></div>
+</div>
 </body>
 </html>
