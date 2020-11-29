@@ -31,19 +31,19 @@
 <style>
   body {
  background-color:blueviolet;
- 
+
 }
 .box1{
   display:flex;
  
-  
+  flex-wrap: wrap;
   align-content: center; 
   
-  justify-content: center;
+  justify-content: flex-end;
   flex-direction: column;
   
-  height: 900px;
-  
+  height: 380px;
+  width: 100%;
 }
 
 
@@ -71,7 +71,7 @@
 .box2{
   display:flex;
   
-  align-content: center; 
+  align-content: flex-start; 
   
   justify-content: center;
   
@@ -87,7 +87,8 @@ text-align : center;
 .box3{
   display:flex;
   
-  align-content: center; 
+  align-content: flex-end
+  ; 
   
   justify-content: center;
   
@@ -101,13 +102,23 @@ text-align : center;
 
 }
 
-.box3 div:nth-of-type(1) {
-  font-size: calc(0.2em + 4vw);
-  height: 100px
+.box1 div:nth-of-type(1) {
+  font-size: calc(2em + 4vw);
+  height: 100px;
+  align-content: flex-end; 
+  line-height: 100px; /* задаем высоту строки */
+
+text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
+text-align : center;
 }
-.box2 div:nth-of-type(1) {
-  
-  height: 100px
+.box1 div:nth-of-type(2) {
+  font-size: calc(0.2em + 4vw);
+  height: 150px;
+  align-content: flex-end; 
+  line-height: 100px; /* задаем высоту строки */
+
+text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
+text-align : center;
 }
 
 
@@ -250,58 +261,56 @@ text-align : center;
 
 }
 
-
 </style>
 
 
 
 </head>
 <body>
-
+  <header class="site-header" >
+    <a href="https://dismao.github.io/page2" class="logo">Logo</a>
+    
+    <nav class="site-nav">
+      <ul>
+        <li class="catside"><a href="https://dismao.github.io/">Home</a></li>
+        <li class="catside"><a href="#0">About</a></li>
+        <li class="catside"><a href="#0">Clients</a></li>
+        <li class="catside"><a href="#0">Contact us</a></li>
+      </ul>
+    </nav>
+    
+    <div class="actions">
+       <div class="dropdown">
+         Settings [ User @ Company ]
+         <ul>
+           <li class="catside"><a href="#0">Sub Item 1</a></li>
+           <li class="catside"><a href="#0">Sub Item 2</a></li>
+           <li class="catside"><a href="#0">Sub Item 3</a></li>
+         </ul>
+      </div>
+      
+      <a href="#0" class="sign-out-link">Sign Out</a>
+    </div>
+  </header>
 
  
 
   
 <div class="box1" onclick="window.location.href = 'https://www.youtube.com/watch?v=qYODdZUahxA';" >
-  <div style="background-image:url(DIsMao.github.io/123.png)">
-  </div>
-  <div class="box2" onclick="window.location.href = 'https://www.youtube.com/watch?v=qYODdZUahxA';">
+  
+  
   <div id="blink5" >Жека гей!!!!</div>
-</div>
-<div class="box3" onclick="window.location.href = 'https://www.youtube.com/watch?v=qYODdZUahxA';">
+
+
   <div id="blink5">Нажми на экран</div>
-</div>
+
 </div>
 
 
 <div class="box4" >
 </div>
 
-<header class="site-header" >
-  <a href="https://dismao.github.io/page2" class="logo">Logo</a>
-  
-  <nav class="site-nav">
-    <ul>
-      <li class="catside"><a href="https://dismao.github.io/">Home</a></li>
-      <li class="catside"><a href="#0">About</a></li>
-      <li class="catside"><a href="#0">Clients</a></li>
-      <li class="catside"><a href="#0">Contact us</a></li>
-    </ul>
-  </nav>
-  
-  <div class="actions">
-     <div class="dropdown">
-       Settings [ User @ Company ]
-       <ul>
-         <li class="catside"><a href="#0">Sub Item 1</a></li>
-         <li class="catside"><a href="#0">Sub Item 2</a></li>
-         <li class="catside"><a href="#0">Sub Item 3</a></li>
-       </ul>
-    </div>
-    
-    <a href="#0" class="sign-out-link">Sign Out</a>
-  </div>
-</header>
+
 
 </body>
 </html>
