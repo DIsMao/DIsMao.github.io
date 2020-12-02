@@ -254,6 +254,24 @@ width: 600px;
 
 }
 
+.text-input{ 
+ position: relative;
+ margin-top: 50px;
+}
+ 
+ input[type="text"]{
+ display: inline-flex;
+
+ height: 40px;
+ box-sizing: border-box;
+ outline: none;
+ border: 1px solid lightgray;
+ border-radius: 3px;
+ padding: 10px 10px 10px 10px;
+ 
+ }
+
+
 
 
 </style>
@@ -299,15 +317,21 @@ width: 600px;
 </div>
 
 
-<header class="site-header" >
-  <a href="https://dismao.github.io/page2" class="gray"></a>
+<header class="site-header"style="border-radius: 50px 50px 50px / 50px 50px;" >
+  <a href="https://dismao.github.io/page2" class="gray" style="border-radius: 50px 50px 50px / 50px 50px;"></a>
   
   <nav class="site-nav">
     <ul>
-      <li class="hvr-shutter-in-horizontal"><a href="https://dismao.github.io/">Домой</a></li>
+      <li class="hvr-shutter-in-horizontal"><a  href="https://dismao.github.io/">Домой</a></li>
       <li class="hvr-shutter-in-horizontal"><a href="#0">О нас</a></li>
       <li class="hvr-shutter-in-horizontal"><a href="#0">Клиенты</a></li>
       <li class="hvr-shutter-in-horizontal"><a href="#0">Contact us</a></li>
+      <input type="text" id="input1" style = "margin-top: 10px;" >
+      <div class="text-input">
+      
+        
+      </div>
+
     </ul>
   </nav>
   
