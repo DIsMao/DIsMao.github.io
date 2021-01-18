@@ -30,9 +30,9 @@
 
 <style>
 .gray {
-    background-image: url(https://dismao.github.io/DIsMao.github.io/ico/ms-icon-144x144.png);
-    width: 48px;
-    height: 48px;
+    background-image: url(https://dismao.github.io/DIsMao.github.io/ico/apple-icon-57x57.png);
+    width:57px;
+    height: 57px;
     display: block;
 }
 
@@ -166,21 +166,8 @@ body {
   background: #14604c;
 }
 
-.dropdown ul {
-  display: none;
-  
-}
 
-.dropdown:hover ul {
-  list-style: none;
-  display: block;
-}
-.dropdown:hover ul li a {
-  text-decoration: none;
-  padding: 5px;
-  
- 
-}
+
 
 .actions {
   margin-left: auto;
@@ -271,9 +258,38 @@ width: 600px;
  
  }
 
+.vsp{
+  display:flex;
+position: fixed;
+visibility:hidden;
+flex-direction: column;
+color: transparent;
+width: calc(0.01em + 7vw);
+transition-duration: 1s;
+}
+.vsp2{
+visibility:hidden;
+color: transparent;
+transition-duration: 1s;
 
+padding: 10%;
+}
 
-
+.anim:hover .vsp {
+  visibility:visible;
+color: white;
+transition-duration: 1s;
+background-color: #aa0294;
+}
+.anim:hover .vsp2
+{
+  color: white;
+  visibility:visible;
+  
+}
+div.vsp2:hover  {
+  background-color: #ff00ea;
+}
 </style>
 
 
@@ -325,7 +341,17 @@ width: 600px;
       <li class="hvr-shutter-in-horizontal"><a  href="https://dismao.github.io/">Домой</a></li>
       <li class="hvr-shutter-in-horizontal"><a href="#0">О нас</a></li>
       <li class="hvr-shutter-in-horizontal"><a href="#0">Клиенты</a></li>
-      <li class="hvr-shutter-in-horizontal"><a href="#0">Contact us</a></li>
+      <div class="anim"><li class="hvr-shutter-in-horizontal"><a href="#0">Анимации</a></li>
+        <div class="vsp">
+          
+          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 1</div>
+          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page4.html';">Анимация 2</div>
+          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 3</div>
+          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 4</div>
+          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 5</div>
+        </div>
+
+      </div>
       <input type="text" id="input1" style = "margin-top: 10px;" >
       <div class="text-input">
       
@@ -337,16 +363,12 @@ width: 600px;
   
   <div class="actions">
      <div class="dropdown">
-       Settings [ User @ Company ]
-       <ul>
-         <li class="catside" style="margin: 2px;"><a href="#0">Sub Item 1</a></li>
-         <li class="catside"style="margin:2px;"><a href="#0">Sub Item 2</a></li>
-         <li class="catside"style="margin: 2px;"><a href="#0">Sub Item 3</a></li>
-       </ul>
+       Settings [ User @ Compan
     </div>
     
     <a href="#0" class="sign-out-link">Sign Out</a>
   </div>
+  
 </header>
 
 
