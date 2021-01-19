@@ -1,0 +1,352 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="Iframe.files/filelist.xml">
+<title>Лекция № 8.5. Плавающиe фреймы</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=RU style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;font-family:Verdana;color:blue'>Плавающие фреймы</span></b></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:Tahoma'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:1.0cm;margin-bottom:0cm;
+margin-left:1.0cm;margin-bottom:.0001pt;text-align:justify;text-indent:36.0pt;
+line-height:120%'><span style='font-size:14.0pt;line-height:120%;font-family:
+Tahoma'>Технология «Плавающих фреймов» позволяет загрузить на любую страницу
+фреймовую область-контейнер для загрузки в нее произвольной </span><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma;
+mso-ansi-language:EN-US'>Web</span><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'>-страницы. Чаще всего данная технология используется в
+рекламных целях и для организации простой новостной ленты. Для вставки
+плавающего фрейма на </span><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Web</span><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>-страницу
+используется парный Тег </span><b><span style='font-size:14.0pt;line-height:
+120%;font-family:Verdana'>&lt;</span></b><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Verdana;
+mso-ansi-language:EN-US'>iframe</span></b></span><b><span style='font-size:
+14.0pt;line-height:120%;font-family:Verdana'>&gt;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Verdana;mso-ansi-language:EN-US'>&nbsp;</span></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;font-family:Verdana;color:purple'>Параметры тега &lt;</span></b><span
+class=SpellE><b><span lang=EN-US style='font-size:14.0pt;font-family:Verdana;
+color:purple;mso-ansi-language:EN-US'>iframe</span></b></span><b><span
+style='font-size:14.0pt;font-family:Verdana;color:purple'>&gt;</span></b><span
+style='color:purple'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;font-family:Tahoma'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Src</span></b></span><b><span style='font-size:14.0pt;font-family:Tahoma;
+color:#993300'>=«путь к файлу»</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Путь к файлу, содержимое которого будет загружаться во
+фрейм.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Width</span></b><b><span style='font-size:14.0pt;font-family:Tahoma;
+color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Ширина фрейма.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Height</span></b><b><span style='font-size:14.0pt;font-family:Tahoma;
+color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Высота</span><span style='font-size:14.0pt;font-family:
+Tahoma;mso-ansi-language:EN-US'> </span><span style='font-size:14.0pt;
+font-family:Tahoma'>фрейма</span><span lang=EN-US style='font-size:14.0pt;
+font-family:Tahoma;mso-ansi-language:EN-US'>.</span><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Align= left | center | right |</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Определяет способ выравнивания фрейма на странице, а также
+способ обтекания его текстом.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Frameborder</span></b></span><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Устанавливает толщину границы вокруг фрейма. </span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Hspace</span></b></span><b><span style='font-size:14.0pt;font-family:
+Tahoma;color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Горизонтальный отступ от фрейма до окружающего <span
+class=SpellE>контента</span>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Vspace</span></b></span><b><span lang=EN-US style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'> </span></b><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'>= число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Вертикальный отступ от фрейма до окружающего <span
+class=SpellE>контента</span>.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Marginheight</span></b></span><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Отступ сверху и снизу от содержания до границы фрейма.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Marginwidth</span></b></span><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'> = число</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Отступ слева и справа от содержания до границы фрейма.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Name</span></b><b><span style='font-size:14.0pt;font-family:Tahoma;
+color:#993300'> = имя</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Внутреннее имя фрейма (предназначено для организации ссылки
+по якорю).</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Scrolling</span></b><b><span style='font-size:14.0pt;font-family:Tahoma;
+color:#993300'>=</span></b><b><span lang=EN-US style='font-size:14.0pt;
+font-family:Tahoma;color:#993300;mso-ansi-language:EN-US'>no</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Отключает отображение полос прокрутки во фрейме.</span></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=SpellE><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;color:#993300;mso-ansi-language:
+EN-US'>Allowtransparency</span></b></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Устанавливает прозрачный фон фрейма, через который виден
+фон страницы.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:navy'>Примечание:</span></b><b><span style='font-family:
+Tahoma;color:navy'> Так как тег &lt;</span></b><span class=SpellE><b><span
+lang=EN-US style='font-family:Tahoma;color:navy;mso-ansi-language:EN-US'>iframe</span></b></span><b><span
+style='font-family:Tahoma;color:navy'>&gt; не поддерживается некоторыми
+браузерами, рекомендуется в качестве альтернативного текста писать:&nbsp; <span
+class=GramE>Ваш</span> браузер не поддерживает плавающие фреймы!</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:navy'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:6.0pt;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:#993300'>&nbsp;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span style='font-size:14.0pt;
+font-family:Tahoma'>Пример</span></b><b><span lang=EN-US style='font-size:14.0pt;
+font-family:Tahoma;mso-ansi-language:EN-US'>:</span></b><span lang=EN-US
+style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>&nbsp;</span><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>&lt;<span
+class=SpellE>iframe</span> <span class=SpellE>src</span>=&quot;news.html&quot;
+width=&quot;468&quot; height=&quot;60&quot; align=&quot;left&quot;&gt;</span></b><span
+lang=EN-US style='mso-ansi-language:EN-US'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span class=GramE><b><span
+style='font-size:14.0pt;font-family:Tahoma'>Ваш</span></b></span><b><span
+style='font-size:14.0pt;font-family:Tahoma'> браузер не поддерживает плавающие
+фреймы!</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><b><span style='font-size:14.0pt;
+font-family:Tahoma'>&lt;/<span class=SpellE>iframe</span>&gt;</span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>&nbsp;</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Этот код можно вставить на любую страницу для организации
+новостной ленты. </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>Для обновления новостей достаточно обновить страницу &quot;</span><b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>news</span></b><b><span
+style='font-size:14.0pt;font-family:Tahoma'>.</span></b><b><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>html</span></b><span
+style='font-size:14.0pt;font-family:Tahoma'>&quot;. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='margin-bottom:6.0pt;text-align:center'><b><span
+style='font-size:14.0pt;font-family:Verdana;color:purple'>Ссылки в плавающем
+фрейме:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:26.75pt;margin-bottom:
+0cm;margin-left:27.0pt;margin-bottom:.0001pt'><span style='font-size:14.0pt;
+font-family:Tahoma'>У ссылок рекомендуется использовать <span class=GramE>параметр</span>
+</span><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>Target</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;font-family:
+Tahoma'>=_</span></b><b style='mso-bidi-font-weight:normal'><span lang=EN-US
+style='font-size:14.0pt;font-family:Tahoma;mso-ansi-language:EN-US'>Top</span></b><span
+lang=EN-US style='font-size:14.0pt;font-family:Tahoma'> </span><span
+class=GramE><span style='font-size:14.0pt;font-family:Tahoma'>который</span></span><span
+style='font-size:14.0pt;font-family:Tahoma'> позволяет загружаться содержимому в
+текущее окно браузера</span></p>
+
+</div>
+
+</body>
+
+</html>

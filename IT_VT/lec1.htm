@@ -1,0 +1,1380 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="lec1.files/filelist.xml">
+<link rel=Edit-Time-Data href="lec1.files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>Обзор HTML-редакторов</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:204;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:536871559 0 0 0 415 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+h3
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	mso-outline-level:3;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{color:#003399;
+	mso-text-animation:none;
+	text-decoration:none;
+	text-underline:none;
+	text-decoration:none;
+	text-line-through:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-margin-top-alt:auto;
+	margin-right:0cm;
+	mso-margin-bottom-alt:auto;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:697893391;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1951149092 68747265 68747267 68747269 68747265 68747267 68747269 68747265 68747267 68747269;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:94.55pt;
+	mso-level-number-position:left;
+	margin-left:94.55pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:1500316779;
+	mso-list-type:hybrid;
+	mso-list-template-ids:884233586 68747265 68747267 68747269 68747265 68747267 68747269 68747265 68747267 68747269;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:92.7pt;
+	mso-level-number-position:left;
+	margin-left:92.7pt;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=RU link="#003399" vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:2.0cm;margin-bottom:.0001pt;text-align:center;
+line-height:120%'><b style='mso-bidi-font-weight:normal'><span
+style='font-size:14.0pt;line-height:120%;font-family:Verdana;mso-bidi-font-family:
+Tahoma;color:blue'>HTML-редакторы<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><i style='mso-bidi-font-style:normal'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma;color:#333399'>HTML-редактор</span></i></b><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'> — компьютерная
+программа, позволяющая создавать и изменять HTML-страницы. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>По своей
+функциональности они делятся на <u>четыре</u> категории:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'>1. Редакторы исходного кода:</span></b><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'> позволяют только редактировать
+исходный код страниц.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'>Примеры:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Стандартные
+тестовые редакторы ОС <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Встроенные редакторы
+кода для браузеров<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Aptana<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Notepad++<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>AkelPad<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'>2. Конструкторы исходного кода</span></b><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>: позволяют
+формировать код страницы, используя готовые шаблоны и справочники.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'>Примеры:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Macromedia HomeSite<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>SiteEdit<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>HTML Source<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>CoffeeCup HTML
+Editor<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>WinSoft WebEditor<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Web-Editor<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:94.55pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l0 level1 lfo1;tab-stops:list 94.55pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Magic HTML Studio<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>Последние версии конструкторов
+исходного кода могут содержать элементы визуальных редакторов <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'>3. Визуальные редакторы:</span></b><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'> показывают готовую
+страницу в режиме WYSIWYG (что видишь, то и получишь).<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'>Примеры:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Adobe DreamWeaver<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Macromedia
+Dreamweaver<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Microsoft
+FrontPage <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Microsoft Visual
+Web Developer<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma;
+mso-ansi-language:EN-US'>WYSIWYG Web Builder</span><span style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma;
+mso-ansi-language:EN-US'>KompoZer</span><span style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+style='font-size:14.0pt;line-height:120%;font-family:Symbol;mso-fareast-font-family:
+Symbol;mso-bidi-font-family:Symbol'><span style='mso-list:Ignore'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></span><![endif]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma;
+mso-ansi-language:EN-US'>Nvu</span><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'>4. Системы управления</span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;color:purple;mso-ansi-language:EN-US'>&nbsp;</span></b><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma;color:purple'>содержанием сайта</span></b><span
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma'>: <span
+style='mso-spacerun:yes'> </span>(</span><span lang=EN-US style='font-size:
+14.0pt;line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Content</span><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma'> </span><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Tahoma;
+mso-ansi-language:EN-US'>Management</span><span lang=EN-US style='font-size:
+14.0pt;line-height:120%;font-family:Tahoma'> </span><span lang=EN-US
+style='font-size:14.0pt;line-height:120%;font-family:Tahoma;mso-ansi-language:
+EN-US'>System</span><span style='font-size:14.0pt;line-height:120%;font-family:
+Tahoma'> – </span><span lang=EN-US style='font-size:14.0pt;line-height:120%;
+font-family:Tahoma;mso-ansi-language:EN-US'>CMS</span><span style='font-size:
+14.0pt;line-height:120%;font-family:Tahoma'>) - программы, предоставляющие готовые
+инструменты для добавления, редактирования, удаления информации на сайте.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:2.0cm;margin-bottom:.0001pt;text-align:justify;line-height:120%'><b
+style='mso-bidi-font-weight:normal'><span style='font-size:14.0pt;line-height:
+120%;font-family:Tahoma'>Примеры:<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>1С-Битрикс<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>4Site CMS<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Amiro.CMS<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>Atilekt.CMS<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>HostCMS<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>MediaWiki<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>NetCat<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>TikiWiki<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:92.7pt;margin-bottom:.0001pt;text-align:justify;text-indent:-18.0pt;
+line-height:120%;mso-list:l1 level1 lfo2;tab-stops:list 92.7pt'><![if !supportLists]><span
+lang=EN-US style='font-size:14.0pt;line-height:120%;font-family:Symbol;
+mso-fareast-font-family:Symbol;mso-bidi-font-family:Symbol;mso-ansi-language:
+EN-US'><span style='mso-list:Ignore'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span lang=EN-US style='font-size:14.0pt;
+line-height:120%;font-family:Tahoma;mso-ansi-language:EN-US'>UmiCMS <o:p></o:p></span></p>
+
+<h1 align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:
+5.0pt;margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><span style='font-family:Verdana;
+color:maroon'><o:p>&nbsp;</o:p></span></h1>
+
+<h1 align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:
+5.0pt;margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><span style='font-family:Verdana;
+color:maroon'>Обзор HTML-редакторов</span></h1>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><span style='font-size:7.5pt'><br>
+</span><b><span style='font-size:14.0pt;font-family:Tahoma;color:blue'>Macromedia
+HomeSite</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Macromedia
+HomeSite, пожалуй, является одним из самых распространенных средств
+редактирования HTML-документов среди пользователей, предпочитающих кодировать
+страницы вручную. Вместе с тем, HomeSite позволяет значительно ускорить сам
+процесс создания и облегчить работу разработчика. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="lec1.files/image001.jpg" target="_blank" width=1024 height=737
+alt="Macromedia HomeSite" border=0><img border=0 width=500 height=360
+id="_x0000_i1025" src="lec1.files/image001.jpg" alt="Macromedia HomeSite"></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>не увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Рабочее
+пространство программы можно условно поделить на три части: первая, самая
+большая - собственно окно с содержанием документа, вторая часть, находящаяся
+левее, по умолчанию содержит перечень документов, имеющихся на диске. И,
+наконец, вверху, кроме традиционного меню, имеются несколько панелей с наиболее
+часто используемыми функциями, вид которых, впрочем, можно настроить на свой
+вкус. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Macromedia
+HomeSite обеспечивают удобную подсветку синтаксиса не только HTML-страниц, но и
+файлов PHP, Perl, ASP, MySQL и других популярных средств разработки. Данный
+факт придется по душе опытным пользователям, которые не ограничиваются
+средствами языка гипертекстовой разметки и используют более сложные языки
+веб-программирования. Если же Вас не устраивает текущая цветовая схема
+подсветки синтаксиса, то это не проблема - можно отредактировать существующую,
+или даже создать собственную схему оформления документов. HomeSite имеет мощную
+справочную систему, содержащую кроме описания возможностей программы
+спецификации языка HTML, справочник тегов и включающая удобные всплывающие
+подсказки по текущему дескриптору - для их вызова достаточно нажать F2, и
+пользователю демонстрируются все возможные атрибуты для данного тега. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Для
+ускорения доступа к часто используемым группам тегов в верхнем правом углу
+имеются несколько панелей, вид и расположение которых к тому же можно изменять.
+</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Панель
+разделена на несколько вкладок, на каждой из которых представлены теги,
+относящиеся к одной группе. Например, вкладка Fonts содержит кнопки для
+быстрого увеличения размера шрифта, смены его начертания, местоположения
+относительно строки и для вставки заголовков трех уровней. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Альтернативным
+способом ввода вручную всех атрибутов тега является, так называемый, Tag Editor
+- редактор тегов, с помощью которого можно существенно облегчить процесс
+присвоения значений различным атрибутам. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Отдельно
+стоит отметить средства для создания и конфигурирования таблиц и фреймов -
+Table Wizard и Frame Wizard, позволяющие существенно облегчить жизнь
+разработчику при создании таблиц и фреймов сложной структуры. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Только
+представьте, сколько бы времени ушло на создание подобной таблицы вручную! </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Необходимо
+отметить, что Homesite содержит встроенный модуль проверки орфографии,
+проверяющий не только корректность использованных дескрипторов, но и
+непосредственно правильность самого текста, а также редактор файлов CSS -
+каскадных листов стилей под названием TopStyle. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Для
+повышения скорости создания документов можно воспользоваться клавиатурными
+сокращениями - HomeSite предоставляет обширное поле деятельности для любителей
+клавиатуры. Например, тегу <br>
+соответствует комбинация клавиш Ctrl+Break. Впрочем, пользователь волен
+назначить практически любой команде удобное ему сочетание клавиш. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы. К
+достоинствам программы можно отнести функциональность, универсальность,
+поддержку различных языков программирования, понятный интерфейс, широкие
+возможности и мощную справочную систему. Минусы. Отсутствие поддержки русского
+языка, высокая цена, необходимо хотя бы поверхностное знание языка HTML для
+создания страничек, высокая цена программы. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Резюмируя
+вышесказанное, можно порекомендовать Macromedia HomeSite для пользователей
+средней и высокой квалификации, которые не ограничиваются возможностями языка
+HTML при создании веб-документов. </span></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'><o:p>&nbsp;</o:p></span></b></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'>SiteEdit</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Программа
+SiteEdit создана российской компанией EdgeStile и позиционируется
+разработчиками как система управления сайтом. В отличие от HomeSite, SiteEdit
+относится к так называемым визуальным средствам разработки - WYSIWYG-редакторам
+(от заглавных букв выражения What You See Is What You Get - &quot;что видите,
+то и получите&quot;). </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>После
+первого запуска программы появляется готовый шаблон веб-узла. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Структура
+всего узла представлена в виде различных страниц, содержащих в себе несколько
+разделов. Раздел, в свою очередь, может содержать в себе несколько записей или
+объектов. Перейдя в режим редактирования (по умолчанию F9), у нас появляется
+возможность редактировать существующие разделы и добавлять новые, изменить
+текст имеющейся записи или добавить новую запись. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>После
+щелчка по кнопке &quot;Изменить раздел&quot; появляется новое окно, в котором и
+можно проделать эту нехитрую операцию: </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Кроме
+непосредственного редактирования текста пользователю доступны кнопки для
+изменения начертания шрифта, вставки рисунка, текущей даты, добавления таблицы,
+вставки гиперссылки, формирования маркированного или нумерованного списка - и
+все это - простым нажатием мыши. Тем же, кто знаком с языком HTML, можно не
+ограничиваться приведенными выше функциями, а просто вручную написать нужный
+код. Так как в окне редактирования никаких излишеств типа подсветки синтаксиса
+не имеется, можно вызвать внешний редактор кликом на кнопку HTML, в котором и
+произвести все необходимые изменения. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Программа
+предлагает несколько шаблонов оформления: book, galeon, kafe, palm_skin,
+stroitel, благодаря которым можно существенно изменить облик всего сайта в
+целом. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Все
+элементы страницы доступны для редактирования. Для более кардинального
+изменения дизайна существует редактор дизайна, предоставляющий широчайшие
+возможности для изменения всех элементов, присутствующих на странице. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="http://www.3dnews.ru/documents/11004/screen2.jpg" target="_blank"
+width=1024 height=735 alt=SiteEdit border=0><img border=0 width=500 height=358
+id="_x0000_i1026" src="lec1.files/image002.jpg" alt=SiteEdit></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>С левой
+стороны имеется список элементов, справа - их вид на странице, снизу же
+доступны окна для изменения значений атрибутов того или иного дескриптора.
+Например, для тега Font доступны следующие атрибуты: цвет, размер, толщина,
+начертание, наклон подчеркивание, интервал. Новичкам понравится способ
+заполнения окошек - вручную прописывать ничего не требуется, достаточно выбрать
+нужный элемент из выпадающего списка. Выбор цвета также не представляет
+трудностей - к услугам пользователя палитра, необходимо лишь определиться с
+понравившимся оттенком, и, вуаля, его шестнадцатеричный код уже указан в соответствующем
+поле. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>В состав
+программы входит готовый шаблон, имитирующий сайт строительный компании,
+который вполне можно подстроить под свои нужды. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Любопытно,
+что напрямую сохранить код странички из программы невозможно, для этого
+необходимо выбрать пункт &quot;Просмотр страницы в браузере&quot;, и лишь из
+браузера можно сохранить страницу в виде html-файла. Данный подход, видимо,
+связан с тем, что в версиях Standard и Business программы SiteEdit имеется
+возможность выгрузки всего проекта сразу на хостинг, однако в бесплатной версии
+Start данная возможность, к сожалению, отсутствует. Отсюда и подобные неувязки.
+</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы.
+Простой интерфейс - не требуется практически никаких знаний HTML, функциональность,
+небольшой вес дистрибутива, русский язык интерфейса, бесплатность стартовой
+версии. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Минусы.
+Невозможность сохранения файлов напрямую из программы, орфографические ошибки. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>SiteEdit
+отлично подойдет для создания персональных страниц и несложных веб-проектов для
+пользователей начальной квалификации и даже для тех, кому абсолютно незнаком
+язык HTML. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>SiteEdit
+выпускается в трех основных версиях - Start, Standard, Business, и двух
+дополнительных -Partner. </span></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'><o:p>&nbsp;</o:p></span></b></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'>HTML Source</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Еще одна
+Freeware-программа, которая попала к нам в обзор - это HTML Source. Первое, что
+бросилось в глаза - небольшой размер дистрибутива программы - всего 1,5 Мб! Это
+навело на несколько скептические мысли о функциональности программы и ее
+возможностях. Однако мы были приятно удивлены. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="http://www.3dnews.ru/documents/11004/screen3.jpg" target="_blank"
+width=1024 height=738 alt="HTML Source" border=0><img border=0 width=500
+height=360 id="_x0000_i1027" src="lec1.files/image003.jpg" alt="HTML Source"></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Интерфейс
+программы напоминает таковой у HomeSite, но инструментов и возможностей,
+конечно, гораздо меньше. С левой стороны расположено окно проводника, в котором
+можно выбирать необходимые для открытия файлы. По центру - непосредственно само
+окно редактирования веб-документов. С правой от него стороны расположена
+палитра, причем работает она в весьма удобном режиме. При наведении курсора
+мыши на тот или иной участок палитры сразу показывается составляющая каждого
+цвета в RGB-палитре, а чуть ниже - непосредственно сам цвет. Более того, при
+щелчке на нужном участке в документ сразу вставляется шестнадцатеричный код
+цвета. Весьма удобно. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>В
+верхней части рабочей области программы имеется обычная панель инструментов, на
+которой расположены кнопки для создания нового документа, открытия существующих
+файлов, печати файла, проверки орфографии и прочие распространенные действия.
+Все пиктограммы выполнены в неплохом стиле, однако огорчает лишь отсутствие
+всплывающих подсказок при наведении на ту или иную иконку действия.
+Примечательно, что программа сама определяет, какие браузеры установлены в
+системе, и в панели инструментов имеются иконки для просмотра документа в
+имеющихся у пользователя браузерах. В моем случае, кроме стандартного Internet
+Explorer, были уставлены также Opera и Mozilla FireFox, что и
+продемонстрировала программа. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Теперь
+перейдем непосредственно к описанию возможностей программы. HTML Source, как
+видно из названия, призван лишь облегчить труд кодера, а не полностью заменить
+его. В программе отсутствует возможность визуальной разработки страниц, т.е.
+для тех, кто не знаком с азами языка гипертекстовой разметки, данный продукт не
+подойдет. Однако тем, кто предпочитает разрабатывать веб-документы вручную,
+HTML Source готов предложить неплохой набор инструментов для ускорения процесса
+кодирования. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>HTML
+Source предлагает подсветку синтаксиса HTML-файлов, однако, на мой взгляд,
+реализация данной функции в программе несколько уступает таковой в HomeSite.
+Во-первых, часть кода, относящаяся к определению стилей, вовсе не подсветилась.
+А во-вторых, отсутствует возможность самостоятельной настройки цветовой схемы,
+которая присутствовала в том же HomeSite. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>В меню
+&quot;Insert&quot; у пользователя имеется возможность вставки даты, специальных
+символов HTML, изображений, а также широко набора смайлов. Весьма оригинальное
+решение разработчиков, включивших столь необычную возможность в свою программу.
+Любителям виртуального общения это должно прийтись по душе. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>В меню
+&quot;Tags&quot; сосредоточены основные группы HTML-дескрипторов. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Наибольший
+же интерес вызывает содержание меню &quot;Tools&quot;, в котором и собраны все
+инструменты данного программного средства. Разберем его содержимое более
+пристально. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Пункт
+&quot;Convert Case&quot; позволяет сменить регистр букв, т.е. либо
+инвертировать его, либо привести к одному определенному. Следующий пункт
+&quot;Convert CodePage&quot; позволяет быстро сменить кодировку всей страницы.
+Среди оставшихся пунктов необходимо отметить встроенный модуль проверки
+орфографии, и средство для оптимизации HTML-кода под названием Tidy, который
+приводит вид документа в соответствии с требованиями организации W3C, которая и
+занимается разработкой стандартов языка гипертекстовой разметки. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Нельзя
+не отметить продвинутую справочную систему программы HTML Source, включающую в
+себя полное описание возможностей программы, а также спецификации языка HTML,
+включая CSS. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы:
+Компактный размер дистрибутива, оригинальные возможности, продвинутая
+справочная система. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Минусы:
+Отсутствие возможностей для визуальной разработки документов, скромные
+возможности по настройке программы, отсутствие русификации. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Таким
+образом, HTML Source придется по душе опытным разработчикам, причем не только
+как средство разработки, но и как справочное пособие. </span></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'><o:p>&nbsp;</o:p></span></b></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'>Magic HTML Studio</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Следующей
+программой, попавшей к нам в обзор, стала Magic HTML Studio, разработанная
+компанией AG FreeSoft. После запуска программы нашему взору предстала необычная
+картина - уж больно необычен был дизайн Magic HTML Studio. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Кому-то
+подобный интерфейс может и придется по душе, но, на мой взгляд, не совсем
+удачное решение для программы подобной направленности. Также огорчил факт
+отсутствия какой бы то ни было подсветки синтаксиса документа. Ну да ладно,
+отбросим все претензии к дизайну, и посмотрим, как у Magic HTML Studio обстоят
+дела с функциональной составляющей. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>А вот
+тут все как раз на высшем уровне! Чего только стоят такие инструменты, как Java
+Constructor и CQI QuickBuilder. Но обо всем по порядку. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>С левой
+стороны расположены кнопки для быстрого форматирования текста, смены типа
+написания и позиции текста на странице. Также представлены пиктограммы для
+вставки в документ заголовков различных уровней. С правой же стороны
+пользователю доступны кнопки для вставки текста определенного цвета, однако
+использовано пространство весьма нерационально - для каждого цвета выделена
+отдельная кнопка, хотя было бы удобнее использовать обычную палитру, например,
+как в программе HTML Source. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Теперь
+перейдем непосредственно к средствам и инструментам, уникальным именно для
+Magic HTML Studio. Java Constructor представляет собой мощное, и одновременно
+простое средство создания скриптов на языке JavaScript, причем для этого
+пользователю совершенно не нужны знания данного языка программирования. С
+помощью конструктора можно вставить календарь или часы на вашу страницу,
+сделать динамическое или выпадающее меню, сотворить простенький баннер,
+состоящий из нескольких картинок и некоторые другие полезные динамические
+элементы. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="http://www.3dnews.ru/documents/11004/screen4.jpg" target="_blank"
+width=1024 height=735 alt="Magic HTML Studio" border=0><img border=0 width=500
+height=358 id="_x0000_i1028" src="lec1.files/image004.jpg"
+alt="Magic HTML Studio"></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Конструктор
+автоматически создает необходимый скрипт, и вам необходимо лишь вставить его в
+нужное место в документе. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Также в
+состав программы входит генератор CGI скриптов, при помощи которого можно
+создать конференцию, гостевую книгу или чат всего за один щелчок мыши,
+предварительно установив параметры скрипта. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>К
+сожалению, проверить данный инструмент на практике у нас не было возможности -
+для этого было необходимо выгрузить файлы на сервер с поддержкой CGI-скриптов.
+Перейдем к другим возможностям программы. Так, с помощью меню Options можно
+производить операции добавления скрипта загрузки Flash, вызова редактора
+элементов, а также операции смены шрифта и добавления формы. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Также
+необходимо отметить неплохую справочную систему на русском языке, содержащую
+описание всех основных возможностей программы. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы:
+продвинутые конструкторы JavaScript и CGI-скриптов, широкие возможности для
+добавления динамических элементов, справочная система на русском языке. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Минусы:
+не совсем удачный дизайн, отсутствие подсветки синтаксиса, отсутствие
+визуальных средств разработки. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Magic
+HTML Studio можно порекомендовать разработчикам средней и высокой квалификации
+для создания динамических веб-документов. </span></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'><o:p>&nbsp;</o:p></span></b></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'>Microsoft FrontPage</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Microsoft
+FrontPage, входящий в пакет Microsoft Office, является классическим
+WYSIWYG-редактором, в котором, однако, присутствует возможность ручной правки
+кода. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Интерфейс
+программы во многом напоминает таковой и Microsoft Word, что нисколько не
+удивляет - унификация внешнего вида поможет новичкам быстрее освоить основные
+возможности FrontPage. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>В
+программе имеется три режима работы с документом: Normal, HTML и Preview. В
+режиме Normal веб-страница представляет собой обычный текстовый файл с
+возможностью редактирования всех элементов - от текста до картинок. </span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="http://www.3dnews.ru/documents/11004/screen5.jpg" target="_blank"
+width=1024 height=738 alt="Microsoft FrontPage" border=0><img border=0
+width=500 height=360 id="_x0000_i1029" src="lec1.files/image005.jpg"
+alt="Microsoft FrontPage"></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>HTML-режим
+позволяет просматривать код страницы и, соответственно, редактировать его. В
+этом режиме FrontPage осуществляет подсветку синтаксиса, однако довольно
+посредственную - дескрипторы выделены синим цветом, все остальное - черного
+цвета. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Наконец,
+в режиме Preview можно посмотреть, как будет выглядеть ваша страница в окне
+браузера. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>FrontPage,
+благодаря тесной интеграции с другими продуктами корпорации Microsoft,
+позволяет вставить в веб-документ различные типы объектов: от картинок и
+диаграмм до листов Microsof Excel. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Разумеется,
+FrontPage имеет конструктор таблиц, существенно облегчающий их создание. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Одним из
+основных преимуществ программы является большое количество имеющихся шаблонов,
+позволяющих пользователю не ломать голову над дизайном своего проекта. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Выбрав
+необходимый шаблон, можно приступать непосредственно к наполнению страницы
+контентом. Вот тут то и ощущается вся прелесть FrontPage: процесс создания
+HTML-страницы ничем не отличается от создания обычного текстового документа в
+Microsoft Word. Пользователю доступны те же средства для редактирования текста,
+смены его форматирования, создания и редактирования таблиц, вставки различных
+объектов и изображений. Программа позволяет с легкостью создавать
+маркированные, нумерованные и многоуровневые списки - и все это без знания
+языка HTML! </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>FrontPage
+делит рабочую область на несколько некоторое количество блоков, содержащих
+определенные элементы страницы - рисунки, текст, заголовки и проч. Для каждого
+блока можно назначить свои параметры форматирования и расположения его
+относительно страницы. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Есть и
+обратная сторона медали - сложность и громоздкость полученного кода, что
+естественно, сказывается на конечном размере документа. Также в дальнейшем будет
+весьма сложно вносить изменения в подобный документ. Но это скорее недостаток
+не конкретного продукта, а практически всех WYSIWYG-редакторов. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы:
+привычный интерфейс для продуктов MS Office, неплохой набор шаблонов,
+интеграция с другими программами из пакета MS Office. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Минусы:
+небольшой набор инструментов разработки, невозможность отдельного приобретения
+программы. Microsoft FrontPage неплохо подойдет в качестве HTML-редактора на
+первое время, однако с ростом потребностей пользователя его возможностей может
+не хватить. </span></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'><o:p>&nbsp;</o:p></span></b></p>
+
+<p align=center style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;
+margin-left:32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;
+mso-para-margin-bottom:5.0pt;mso-para-margin-left:11.34gd;text-align:center;
+background:white;vertical-align:top'><b><span style='font-size:14.0pt;
+font-family:Tahoma;color:blue'>Macromedia Dreamweaver</span></b></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>И,
+наконец, последняя программа в нашем обзоре Macromedia Dreamweaver. Немалый
+размер дистрибутива (62 Мб) позволяет ожидать многого от этой HTML-редактора. И
+действительно, возможности Macromedia Dreamweaver впечатляют. После установки
+пользователя просят выбрать внешний вид программы, который отличается в
+зависимости от подхода к созданию веб-документов. При выборе &quot;Code&quot;
+интерфейс программы будет подстроен под нужды кодировщика, а при выборе
+&quot;Design&quot; - соответственно, дизайнера. Впрочем, всегда имеется
+возможность для переключения между этими двумя режимами, а также доступен
+третий, комбинированный режим - рабочая область программы делится на две части.
+</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:32.4pt;
+margin-bottom:0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:
+0cm;mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt;text-align:center;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'><br>
+<a href="http://www.3dnews.ru/documents/11004/screen6.jpg" target="_blank"
+width=1024 height=735 alt="Macromedia Dreamweaver MX 2004" border=0><img
+border=0 width=500 height=358 id="_x0000_i1030" src="lec1.files/image006.jpg"
+alt="Macromedia Dreamweaver MX 2004"></a><br>
+</span><span style='font-size:7.5pt;font-family:Verdana'>увеличить картинку</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>С правой
+стороны расположено еще одно многоуровневое меню, в котором, в частности,
+имеются пункты для отображения справки по текущему дескриптору, список
+используемых изображений, проводник и некоторые другие пункты. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Дополнительную
+помощь разработчику обеспечивают контекстные меню, в которых продублированы основные
+функции, вызываемые из главного меню. Например, работая в визуальном режиме по
+щелчку правой кнопки мыши на каком-либо элементе, мы можем сменить используемый
+шрифт, его начертание цвет и прочие атрибуты, а также возможно изменить
+атрибуты используемого тега. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Основные
+возможности программы заключены именно в использовании визуального режима.
+Пиктограммы на панели инструментов отвечают за самые распространенные действия:
+добавление гиперссылку, вставка изображения, конструирование таблицы, добавление
+текущей даты и др. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Для
+пользователей, знакомых с возможностями языка HTML, можно порекомендовать
+использовать инструмент под названием Tag Chooser, с помощью которого можно
+вставить не только любой HTML-тег, но и основные выражения и операторы таких
+языков программирования, как JavaScript, ASP.Net, PHP, WML и ColdFusion. Все
+это открывает новые горизонты использования программного средства при
+разработке различных сложных проектов с использованием серверных языков
+программирования. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Удобство
+комбинированного режима заключается в том, что все проделанные изменения
+отображаются сразу в обоих окнах. Т.е., внеся изменения в код документа, вы
+сразу видите результат в смежном окне и, наоборот, при выборе какого-либо
+элемента отображается соответствующий код. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>При
+работе в режиме &quot;Code&quot; рабочая область программы напоминает таковую у
+HomeSite - чувствуется, что у продуктов один создатель, однако функциональность
+у Dreamweaver все-таки повыше. Чего стоит только один конструктор таблиц,
+предоставляющий разработчику небывалую гибкость при создании таблиц. Более
+того, при создании таблицы программа предлагает использовать один из шаблонов
+оформления, коих насчитывается несколько десятков, причем при выборе
+определенного шаблона тут же имеется возможность подстроить его под свои нужды,
+откорректировав некоторые его атрибуты. После создания таблицы и наполнения ее
+содержимым становится доступным сортировка таблицы по какому-либо столбцу. И
+все это - в визуальном режиме, сам код же, естественно, меняется автоматически.
+</span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Macromedia
+Dreamweaver может использоваться совместно с другими продуктами компании -
+Macromedia Fireworks, Flash и др. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Если же
+выбор пользователя, который предпочитает создавать документы в визуальном
+режиме, практически очевиден, то перед &quot;кодировщиком&quot; появляется
+непростая задача в выборе между двумя продуктами Macromedia: HomeSite или
+Dreamweaver? </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Можно
+отметить, что возможности Dreamweaver будут лишними для кодера, однако при
+большом объеме рутинной работы можно вполне воспользоваться визуальным режимом
+- если программа предлагает его, то почему бы не попробовать? Пользователи же
+HomeSite подобной возможности лишены, но зато программа предлагает им весь
+необходимый набор инструментов для комфортной разработки веб-документов
+различной сложности. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Таким
+образом, каждый волен выбирать нужный ему продукт самостоятельно, учитывая
+поставленные цели и имеющиеся знания. Разумеется, вопрос также и в цене - оба
+продукта Macromedia распространяются как Shareware, но их можно бесплатно
+использовать в течение 30-дневного пробного срока. Этого времени вполне
+достаточно, чтобы определиться с выбором. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Плюсы:
+огромный набор инструментов для визуальной разработки документов, понятный
+интерфейс, возможность работы в режиме кодера, готовый набор шаблонов. </span></p>
+
+<p style='margin-top:5.0pt;margin-right:32.4pt;margin-bottom:5.0pt;margin-left:
+32.4pt;mso-para-margin-top:5.0pt;mso-para-margin-right:11.34gd;mso-para-margin-bottom:
+5.0pt;mso-para-margin-left:11.34gd;text-align:justify;background:white;
+vertical-align:top'><span style='font-size:10.5pt;font-family:Verdana'>Минусы:
+большой объем дистрибутива, высокая цена продукта. </span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:32.4pt;margin-bottom:
+0cm;margin-left:32.4pt;margin-bottom:.0001pt;mso-para-margin-top:0cm;
+mso-para-margin-right:11.34gd;mso-para-margin-bottom:0cm;mso-para-margin-left:
+11.34gd;mso-para-margin-bottom:.0001pt'>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

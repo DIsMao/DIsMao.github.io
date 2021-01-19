@@ -1,0 +1,417 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 11 (filtered)">
+<title>Верстка сайта слоями</title>
+
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+h3
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:13.5pt;
+	font-family:"Times New Roman";
+	font-weight:bold;}
+p
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:2.0cm 42.5pt 2.0cm 3.0cm;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU>
+
+<div class=Section1>
+
+<h3 align=center style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;line-height:150%;
+vertical-align:baseline'><span style='font-size:14.0pt;line-height:150%;
+font-family:Tahoma;color:navy'>Разработка </span><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:navy'>Web-</span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:navy'>сайта методом
+слоев</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+136.1pt;margin-bottom:.0001pt;line-height:150%;vertical-align:baseline'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>Задание:</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+154.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:150%;vertical-align:
+baseline'><span style='font-size:14.0pt;line-height:150%;font-family:Symbol;
+color:#424242;font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>Подготовить </span><span lang=EN-US
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242;
+font-weight:normal'>Web</span><span style='font-size:14.0pt;line-height:150%;
+font-family:Tahoma;color:#424242;font-weight:normal'>-сайт на заданную тему.</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+154.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:150%;vertical-align:
+baseline'><span style='font-size:14.0pt;line-height:150%;font-family:Symbol;
+color:#424242;font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>Способ верстки: «Слои»</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+154.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:150%;vertical-align:
+baseline'><span style='font-size:14.0pt;line-height:150%;font-family:Symbol;
+color:#424242;font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>Тип навигации: циклический</span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242;
+font-weight:normal'> </span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+154.1pt;margin-bottom:.0001pt;text-indent:-18.0pt;line-height:150%;vertical-align:
+baseline'><span style='font-size:14.0pt;line-height:150%;font-family:Symbol;
+color:#424242;font-weight:normal'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>Способ навигации: графические кнопки с
+эффектом ролловера </span></h3>
+
+<div style='border:none;border-bottom:solid windowtext 1.5pt;padding:0cm 0cm 1.0pt 0cm;
+margin-left:136.1pt;margin-right:2.0cm'>
+
+<h3 style='margin-top:0cm;margin-right:0cm;margin-bottom:0cm;margin-left:18.0pt;
+margin-bottom:.0001pt;text-indent:-18.0pt;line-height:150%;vertical-align:baseline;
+border:none;padding:0cm'><span lang=EN-US style='font-size:14.0pt;line-height:
+150%;font-family:Symbol;color:#424242;font-weight:normal'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>Оформление: индивидуальное через </span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242;font-weight:normal'>CSS</span></h3>
+
+<h3 style='margin:0cm;margin-bottom:.0001pt;line-height:150%;vertical-align:
+baseline;border:none;padding:0cm'><span lang=EN-US style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242;font-weight:normal'>&nbsp;</span></h3>
+
+</div>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+136.1pt;margin-bottom:.0001pt;line-height:150%;vertical-align:baseline'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>&nbsp;</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+136.1pt;margin-bottom:.0001pt;line-height:150%;vertical-align:baseline'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>Материал
+для сайта:</span></h3>
+
+<h3 style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;margin-left:
+136.1pt;margin-bottom:.0001pt;line-height:150%;background:whitesmoke;
+vertical-align:baseline'><span style='font-size:14.0pt;line-height:150%;
+font-family:Tahoma;color:#424242'>Самые известные программисты мира</span></h3>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#666666'><span style='outline: 0px;
+font-weight:inherit;font-style:inherit;background-position-x:0px;background-position-y:
+-1px;float:left'>&nbsp;</span></p>
+
+<p style='margin-top:7.2pt;margin-right:2.0cm;margin-bottom:7.2pt;margin-left:
+136.1pt;text-align:justify;line-height:150%;background:whitesmoke;vertical-align:
+baseline;outline: 0px;font-weight:inherit;font-style:inherit'><b><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>13
+сентября во всем мире отмечается профессиональный праздник программистов.<span
+class=apple-converted-space>&nbsp;</span></span></b><span style='font-size:
+14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>Это 256-й день года,
+выбранный как символ восьмиразрядного байта, позволяющего выразить идентичное
+количество значений. В России день программиста стал официальным праздником в
+2009 году.<span class=apple-converted-space>&nbsp;</span></span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'><img
+width=438 height=700 src="Zad_16.files/image001.jpg"
+alt="Самые известные программисты мира"></span></p>
+
+<p style='margin-top:7.2pt;margin-right:2.0cm;margin-bottom:7.2pt;margin-left:
+136.1pt;text-align:justify;line-height:150%;background:whitesmoke;vertical-align:
+baseline;outline: 0px;font-weight:inherit;font-style:inherit'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>На
+фото: математик из Великобритании Ада Лавлейс (1815-1852), дочь Байрона,
+считающаяся создательницей первой в мире программы и описания вычислительной
+машины. Сам проект в конечном итоге был разработан британским математиком
+Чарльзом Бэббиджем.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'><img
+width=514 height=700 src="Zad_16.files/image002.jpg"
+alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Джон фон Нейман, венгеро-американский математик сделал важный вклад во многие
+отрасли науки, такие как: квантовая физика, функциональный анализ и
+информатика. С именем фон Неймана связывают архитектуру большинства современных
+компьютеров, подразумевающую совместное хранение программ и данных для них в
+памяти вычислительной машины.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=464 height=700
+src="Zad_16.files/image003.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Компьютерный специалист Деннис Ритчи известен по участию в создании языков
+программирования BCPL, B, C, расширения ALTRAN для языка программирования
+FORTRAN. Языки C и FORTRAN получили широкую популярность в прикладных задачах,
+также на базе языка C были разработаны многие более поздние языки
+программирования. Также, Ритчи участвовал в разработке операционных систем
+Multics и UNIX.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=590 height=590
+src="Zad_16.files/image004.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Бьёрн Страуструп — автор языка программирования C++ — одного из самых широко
+используемых языков программирования, разработанного на базе C. Страуструп стал
+первопроходцем в области использования объектно-ориентированного
+программирования, которое позволяет создавать масштабные проекты за короткое
+время, распределяя задачи между участниками и используя ранее разработанные
+решения. На базе C++ разработано несколько современных языков программирования.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=590 height=597
+src="Zad_16.files/image005.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Основателем движения свободного ПО, проекта GNU (General Public License),
+основанного в 1983-м году, а также фонда свободных программ и Лиги за свободу
+программирования стал американец Ричард Столлман. В числе его изобретений
+числится также концепция &quot;копилефта&quot;.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=466 height=700
+src="Zad_16.files/image006.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Алексей Пажитнов — советский программист и изобретатель всемирно известной и
+любимой всеми игры &quot;Тетрис&quot;. С 1996 по 2005 год Пажитнов работал в
+компании Microsoft, где занимался разработкой головоломок Pandora's Box. В</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242'> 2007 </span><span style='font-size:14.0pt;line-height:150%;
+font-family:Tahoma;color:#424242'>и</span><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'> </span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>в</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242'> 2009 </span><span style='font-size:14.0pt;line-height:150%;
+font-family:Tahoma;color:#424242'>годах</span><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'> </span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>был</span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'> </span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>удостоен</span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'> </span><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma;color:#424242'>награды</span><span
+lang=EN-US style='font-size:14.0pt;line-height:150%;font-family:Tahoma;
+color:#424242'> Game Developers Choice Awards First Penguin Award.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=455 height=700
+src="Zad_16.files/image007.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+В ряду с известными программистами и хакерами — Линус Торвальдс. Линус создал
+Linux — ядро операционной системы GNU/Linux, являющейся на данный момент самой
+распространённой из свободных операционных систем.<br>
+На ядре Linux построена операционная система Android, являющаяся самой
+распространенной ОС для смартфонов в мире.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=453 height=700
+src="Zad_16.files/image008.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Соучредитель компании Apple, разработчик компьютеров американец Стив Возняк по
+праву считается одним из отцов революции персональных компьютеров в 1970-х гг.
+Возняк основал Apple Computer вместе со Стивом Джобсом в 1976 году и
+разрабатывал для первых компьютеров как программную, так и аппаратную часть.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=464 height=700
+src="Zad_16.files/image009.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Один из богатейших людей планеты, изобретатель, программист и бизнесмен Билл
+Гейтс навсегда вошел в историю компьютерных технологий как основатель и
+крупнейший акционер компании Microsoft. В тринадцать лет Билл написал свою
+первую программу – игру «Крестики-нолики» на языке программирования BASIC.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=466 height=700
+src="Zad_16.files/image010.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Евгений Касперский — российский программист, специалист по информационной
+безопасности, один из основателей, ведущий разработчик и крупнейший акционер
+ЗАО &quot;Лаборатория Касперского&quot;. Также является лауреатом
+государственной премии в области науки и технологий за 2008 год.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=465 height=700
+src="Zad_16.files/image011.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+В этом году не стало одного из сооснователей поисковой компании
+&quot;Яндекс&quot; Ильи Сегаловича. Российский программист, директор по
+технологиям и разработкам, а также активный участник и организатор помощи
+сиротам и больным детям скончался 23 июля 2013 года.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=465 height=700
+src="Zad_16.files/image012.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Человек 2010 года по версии журнала Time, самый молодой миллиардер Марк
+Цукерберг — создатель всемирно известной и крайне популярной социальной сети
+Facebook. В школьные годы Марк разработал сетевую версию игры &quot;Риск&quot;.
+Отвергнув предложения о трудоустройстве со стороны AOL и Microsoft, совместно с
+Крисом Хьюзом и Дастином Московицем начал работу над крупнейшей социальной
+сетью в мире.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=465 height=700
+src="Zad_16.files/image013.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Сооснователь социальной сети &quot;Вконтакте&quot; Павел Дуров еще в период
+учёбы в СПбГУ занимался разработкой некоммерческих Интернет-проектов,
+предназначенных для повышения качества общественной и научной жизни
+университета. Проект &quot;Вконтакте&quot; — также его собственная работа.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=466 height=700
+src="Zad_16.files/image014.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+Игорь Данилов — российский программист, автор популярного антивируса Dr.Web,
+технический директор и основатель компании &quot;Доктор Веб&quot;.</span></p>
+
+<p class=MsoNormal align=center style='margin-top:0cm;margin-right:2.0cm;
+margin-bottom:0cm;margin-left:136.1pt;margin-bottom:.0001pt;text-align:center;
+line-height:150%;background:whitesmoke;vertical-align:baseline;outline: 0px;
+font-weight:inherit;font-style:inherit'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><img width=499 height=700
+src="Zad_16.files/image015.jpg" alt="Самые известные программисты мира"></span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;text-align:justify;line-height:150%;
+background:whitesmoke;vertical-align:baseline'><span style='font-size:14.0pt;
+line-height:150%;font-family:Tahoma;color:#424242'><br>
+В 1992 г. Борис Нуралиев вместе с братом — Сергеем Нуралиевым, создали
+бухгалтерскую программу &quot;1С&quot;. В 1996 году возглавляемая им компания
+выпустила систему &quot;1С:Предприятие&quot;, начала заниматься разработкой
+компьютерных игр. В 2005 году компания &quot;1С&quot; вошла в тройку лидеров
+российского рынка интегрированных систем управления предприятиями.</span></p>
+
+<p class=MsoNormal style='margin-top:0cm;margin-right:2.0cm;margin-bottom:0cm;
+margin-left:136.1pt;margin-bottom:.0001pt;line-height:150%'><span
+style='font-size:14.0pt;line-height:150%;font-family:Tahoma'>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>

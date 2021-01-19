@@ -1,0 +1,355 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Лекция 7. Службы FTP, SSH, Telnet</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.Normal, li.Normal, div.Normal
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+span.Hyperlink
+	{color:blue;
+	text-decoration:underline;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:1.0cm 63.65pt 1.0cm 63.65pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=Normal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;color:red'>Лекция 7</span></b></p>
+
+<p class=Normal align=center style='text-align:center'><b><span
+style='font-size:14.0pt;color:red'>Служба Telnet. Слжба SSH. Слжба </span></b><b><span
+lang=EN-US style='font-size:14.0pt;color:red'>FTP</span></b><b><span
+style='font-size:14.0pt;color:red'>. </span></b></p>
+
+<p class=Normal><b><u><span lang=EN-US style='color:blue'>I</span><span
+ style='color:blue'>.</span></u></b><b><u><span style='color:blue'> Служба Telnet</span></u></b></p>
+
+<p class=Normal>Служба <b>Telnet</b> - предназначена для эмуляции удаленного
+терминала. </p>
+
+<p class=Normal>С помощью Telnet можно обратиться к любому порту и посмотреть,
+что он отвечает (с некоторыми (например, с ftp) даже пообщаться). </p>
+
+<p class=Normal>Служба Telnet состоит из: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>telnet - интерфейса пользователя; </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>telnetd - процесса (серверная часть); </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>TELNET - протокола. </p>
+
+<p class=Normal>Служба Telnet работает по принципу «Клиент – Сервер» по
+протоколу Telnet.</p>
+
+<p class=Normal><b><u><span style='color:blue'>Протокол Telnet</span></u></b></p>
+
+<p class=Normal>Первый стандарт - RFC0158 – 1971 год. </p>
+
+<p class=Normal>Последняя версия - <a
+href="javascript:if(confirm('http://ipm.kstu.ru/internet/doc/rfc/rfc855.txt%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://ipm.kstu.ru/internet/doc/rfc/rfc855.txt'"><span
+class=Hyperlink>RFC0855</span></a> – 1983 год. </p>
+
+<p class=Normal><b>NVT (network virtual terminal)</b> - это воображаемое
+устройство, находящееся на обоих концах соединения, у клиента и сервера, с
+помощью которого устанавливается соответствие между их реальными терминалами. </p>
+
+<p class=Normal>Порт по умолчанию 23. </p>
+
+<p class=Normal><b><u><br>
+<span style='color:blue'>Режимы функционирования Telnet клиентов и серверов</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal>Существуют четыре режима, в которых функционирует большинство Telnet
+клиентов и серверов: </p>
+
+<p class=Normal style='margin-left:18.0pt'><b>Полудуплексный. </b><br>
+NVT по умолчанию это полудуплексное устройство, которое требует исполнения
+команды GO AHEAD (GA) от сервера, перед тем как будет принят ввод от
+пользователя. Ввод пользователя отображается локальным эхом от NVT клавиатуры
+на NVT принтер, таким образом, от клиента к серверу посылаются только полные
+строки. </p>
+
+<p class=Normal style='margin-left:18.0pt'><b>Символ за один раз. (самый
+распространенный)</b><br>
+Каждый вводимый символ отправляется серверу отдельно от других. <br>
+Сервер отражает эхом (опция ECHO - RFC 857) большинство символов и эти символы
+отражаются на экране клиента (это увеличивает трафик).<br>
+<br>
+<b>Строка за один раз. </b><br>
+Если какая-либо опций (ECHO и SUPPRESS GO AHEAD) не включена, Telnet находится
+в режиме строка за один раз. </p>
+
+<p class=Normal style='margin-left:18.0pt'><b>Линейный режим (linemode). </b><br>
+В данном случае этот термин означает реальную опцию linemode (RFC 1184). Эта
+опция обсуждается клиентом и сервером и корректирует все недостатки в режиме
+строка за один раз. <br>
+<br>
+</p>
+
+<span style='font-size:12.0pt;font-family:"Times New Roman";layout-grid-mode:
+line'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=Normal><b><span lang=EN-US style='color:blue'>II</span><span
+style='color:blue'>. <u>Служба SSH</u></span></b></p>
+
+<p class=Normal><b>SSH (Secure Shell) </b>- обеспечивает безопасное соединение,
+путем шифрования передаваемой информации.</p>
+
+<p class=Normal>SSH поддерживает возможности работы с <b>telnet</b>; безопасную
+работу с протоколом <b>X11 </b>(графический терминал); c файлами по протоколу <b>sftp</b>.</p>
+
+<p class=Normal><b><u><span style='color:blue'>Протокол SSH</span></u></b></p>
+
+<p class=Normal>Порт по умолчанию 22.</p>
+
+<p class=Normal>Включает в себя протоколы трех уровней: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>протокол транспортного уровня</b> - обеспечивает
+взаимодействие алгоритма и обмен ключами. Обмен ключами позволяет
+аутентифицировать сервер и создать криптографически защищённое соединение:
+обеспечивая целостность, конфиденциальность и дополнительное сжатие. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>протокол аутентификации - </b>этот уровень предоставляет
+несколько механизмов для аутентификации пользователя: здесь может
+использоваться традиционная парольная аутентификация, аутентификация,
+основанная на публичном ключе и т.д. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>протокол соединения - </b>создает безопасный (шифруемый)
+канал, представляя его в виде нескольких логических каналов, которые
+используются для различных целей (различных видов служб). </p>
+
+<p class=Normal style='margin-left:18.0pt'><b><u><span lang=EN-US
+style='color:blue'>III</span><span style='color:blue'>. Служба FTP</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal>Служба FTP (от протокола - File Transfer Protocol) -
+предназначена для обмена файлами. </p>
+
+<p class=Normal>FTP служба построена по хорошо известной схеме
+&quot;клиент-сервер&quot;. </p>
+
+<p class=Normal><b>Клиент </b>(браузер,Windows Commander, NetVampir ...)
+посылает запросы серверу и принимает файлы. </p>
+
+<p class=Normal><b>Сервер HTTP</b> (Apeche, IIS ...) обрабатывает запросы
+клиента на получение файла. </p>
+
+<p class=Normal>Служба FTP базируется на двух стандартах: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>URL (Universal Resource Locator) - универсальный способ адресации
+ресурсов в сети ; </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span lang=EN-US>FTP (File Transfer Protocol) - </span>протокол передачи
+файлов<span lang=EN-US>. </span></p>
+
+<p class=Normal><b><u><span style='color:blue'>Протокол FTP</span></u></b></p>
+
+<p class=Normal>File Transfer Protocol - протокол передачи файлов, протокол
+высокого уровня (а именно, уровня приложений). <br>
+Используется службой FTP для передачи файлов. </p>
+
+<p class=Normal>Первый стандарт - RFC114 – 1971год. </p>
+
+<p class=Normal>Последняя версия - <a
+href="javascript:if(confirm('http://ipm.kstu.ru/internet/doc/rfc/rfc959.txt%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://ipm.kstu.ru/internet/doc/rfc/rfc959.txt'"><span
+class=Hyperlink>RFC959</span></a> – 1985 год. </p>
+
+<p class=Normal>FTP отличается от других приложений тем, что он использует два
+TCP соединения для передачи файла. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Управляющее
+соединение - соединение для посылки команд серверу и получение ответов от него.
+Для канала управления используется протокол Telnet. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Соединение
+данных - соединение для передачи файлов. </p>
+
+<p class=Normal>В старых версиях для передачи данных использовался только 20-й
+порт (<b>активный режим</b>), в современных версиях FTP-серверов порт для канала
+данных может назначаться сервером из нестандартных (N &gt; 1024) портов (<b>пассивный
+режим</b>). </p>
+
+<p class=Normal>Протокол FTP определяет запрос-ответный способ взаимодействия
+между программой-клиентом и программой-сервером. </p>
+
+<p class=Normal>Работа FTP на пользовательском уровне содержит несколько
+этапов: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Идентификация
+(ввод имени и пароля). </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Выбор
+каталога. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Определение
+режима обмена (поблочный, поточный, ascii или двоичный). </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Выполнение
+команд обмена (get, mget, dir, mdel, mput или put). </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Завершение
+процедуры (quit или close). </p>
+
+<p class=Normal><b><u><span style='color:blue'>Различие работы пассивного
+режима и активного</span></u></b><span style='color:blue'> </span></p>
+
+<p class=Normal><b><u>Активный режим</u> </b></p>
+
+<p class=Normal>Действия сервера и клиента: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+устанавливает связь и посылает запрос на 21 порт сервера с порта N (N&gt;1024) </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сервер
+посылает ответ на порт N (N&gt;1024) клиента </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сервер
+устанавливает связь для передачи данных по порту 20 на порт клиента N+1 </p>
+
+<p class=Normal><b><u>Пассивный режим</u></b></p>
+
+<p class=Normal>Действия сервера и клиента: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+устанавливает связь и посылает запрос (сообщает, что надо работать в пассивном
+режиме) на 21 порт сервера с порта N (N&gt;1024) </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сервер
+посылает ответ и сообщает номер порта для канала данных P (P&gt;1024) на порт N
+(N&gt;1024) клиента </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+устанавливает связь для передачи данных по порту N+1 на порт сервера P
+(P&gt;1024) </p>
+
+<p class=Normal><b>Активный FTP </b>выгоден для FTP-сервера, но вреден для
+стороны клиента. FTP сервер пытается соединиться со случайными высокими (по
+номеру) портами на клиенте, такое соединение наверняка будет блокировано
+брандмауэром на стороне клиента. </p>
+
+<p class=Normal><b>Пассивный FTP</b> выгоден для клиента, но вреден для
+FTP-сервера. Клиент будет делать оба соединения к серверу, но одино из них
+будет к случайному высокому порту, такое соединение наверняка будет блокировано
+брандмауэром на стороне сервера. </p>
+
+<p class=Normal><b><u><span style='color:blue'>Некоторые типы данных: </span></u></b></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>ASCII (TYPE A ) - передача текстовой информации</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>IMAGE (TYPE I ) - передача бинарных файлов</p>
+
+<p class=Normal><b><u><span style='color:blue'><span style='text-decoration:
+ none'>&nbsp;</span></span></u></b></p>
+
+<p class=Normal><b><u><span style='color:blue'><span style='text-decoration:
+ none'>&nbsp;</span></span></u></b></p>
+
+<p class=Normal><b><u><span style='color:blue'>Кода ошибок</span></u></b></p>
+
+<p class=Normal>При выполнении FTP система возвращает трехразрядные десятичные
+коды-ошибки, которые позволяют судить о корректности обмена. Выдача кода
+сопровождается текстом-комментарием. Первая цифра может принимать значения от 1
+до 5.</p>
+
+<p class=Normal>Первая цифра: <br>
+1yz - предварительный положительный ответ: команда принята, но не завершена<br>
+2yz - действие успешно завершено<br>
+3yz - команда принята, сервер ждет дополнительную информацию<br>
+4yz - временная неудача, повторить через некоторое время<br>
+5yz - фатальная ошибка</p>
+
+<p class=Normal>Вторая цифра: <br>
+x0z - синтаксис<br>
+x1z - ответ на запрос информации<br>
+x2z - ответ относится к состоянию управляющего соединения или соединения данных<br>
+x3z - аутентификация и учет<br>
+x4z - смысл не определен<br>
+x5z - состояние файловой системы сервера<br>
+<br>
+</p>
+
+<p class=Normal><b><u><span style='color:blue'>Программы клиенты</span></u></b></p>
+
+<p class=Normal><b>FTP - </b>программа запускается с командной строки. </p>
+
+<p class=Normal><b>Windows Comander </b>- может работать как FTP-клиент. Позволяет
+работать с удаленными каталогами также как с локальными.</p>
+
+<p class=Normal><b>NetVampire -</b> Специализированный FTP-клиент, который
+позволяет качать большие файлы и качать по плохим каналам.</p>
+
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,484 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=Generator content="Microsoft Word 10 (filtered)">
+<title>Лекция 8. Протоколы: ICMP, SNMP, DHCP, BOOTP. Службы SNMP, DHCP</title>
+
+<style>
+<!--
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.Normal, li.Normal, div.Normal
+	{margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	layout-grid-mode:line;}
+span.Hyperlink
+	{color:blue;
+	text-decoration:underline;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:70.85pt 63.65pt 2.0cm 63.65pt;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+
+</head>
+
+<body lang=RU link=blue vlink=purple>
+
+<div class=Section1>
+
+<p class=Normal align=center style='text-align:center'><b><span
+style='color:red'>Лекция 8</span></b></p>
+
+<p class=Normal align=center style='text-align:center'><b><span
+style='color:red'>Протоколы: ICMP, SNMP, DHCP, BOOTP. Службы SNMP, DHCP</span></b></p>
+
+<p class=Normal align=center style='text-align:center'><b><span
+style='color:red'>&nbsp;</span></b></p>
+
+<p class=Normal><b><u><span style='color:blue'>Протокол ICMP</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal><b>ICMP (Internet Control Message Protocol) </b>- протокол
+управляющих сообщений. </p>
+
+<p class=Normal>Вы их получаете постоянно, а иногда и отправляете, например: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Если адрес не доступен, вы получаете сообщение ICMP. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Если порт не доступен, вы получаете сообщение ICMP. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Если вы пользуетесь командой ping, вы получаете сообщение ICMP. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>и т.д. </p>
+
+<p class=Normal>Сообщение ICMP инкапсулируется прямо в IP пакет (поле данных),
+т.е. протоколы транспортного уровня не используются. </p>
+
+<p class=Normal>Сообщения делятся на два типа: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Парные (вопрос/ответ) </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Непарные (например: посылаете запрос к HTTP-серверу, но сервер не
+доступен, и последний маршрутизатор (или сервер) отправляет ICMP-сообщение вам)
+</p>
+
+<p class=Normal><b><u>Заголовок сообщения ICMP.</u></b> Структура заголовка
+сообщения ICMP. Слова по 32 бита. Типы сообщений протокола ICMP </p>
+
+<div align=center>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse'>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'><b>Тип</b></p>
+  </td>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-left:
+  none;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'><b>Сообщение</b></p>
+  </td>
+  <td width=170 style='width:127.25pt;border:solid black 1.0pt;border-left:
+  none;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'><b>Назначение</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>0</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Echo Reply</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Ответ ICMP - эхо (ping)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>3</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Destination Unreachable</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Цель не достижима</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>4</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Source Quench</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Переполнение очереди источника</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>5</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Redirect</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Перенаправление маршрута</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>8</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Echo Request</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Запрос ICMP - эхо (ping)</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>9</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>&nbsp;</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Объявление маршрутизатора</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>10</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>&nbsp;</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Запрос маршрутизатора</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>11</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Time Exceeded</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Время жизни истекло</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>12</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Parameter Problem</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Неверный параметр</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>13</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Timestamp Request</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Запрос метки времени</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>14</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Timestamp Reply</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Ответ метки времени</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>15</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Information Request</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Запрос информации</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>16</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Information Reply</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Ответ информации</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>17</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Address Mask Request</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Запрос маски адреса</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=165 style='width:123.55pt;border:solid black 1.0pt;border-top:none;
+  padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal align=center style='text-align:center'>18</p>
+  </td>
+  <td width=165 style='width:123.55pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Address Mask Reply</p>
+  </td>
+  <td width=170 style='width:127.25pt;border-top:none;border-left:none;
+  border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;padding:0cm 0cm 0cm 0cm'>
+  <p class=Normal>Ответ маски адреса</p>
+  </td>
+ </tr>
+</table>
+
+</div>
+
+<p class=Normal><b><u><span style='text-decoration:none'>&nbsp;</span></u></b></p>
+
+<p class=Normal><b><u><span style='color:blue'>Служба SNMP</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal>Создана для стандартизации управления оборудованием разных
+производителей. </p>
+
+<p class=Normal>Например, в сети установлены разные маршрутизаторы (cisco,
+motorola, linux и т.д.), все настраиваются по-разному. Нужно изменить настройки
+на всех маршрутизаторах. Обычным методом придется каждый настраивать
+индивидуально (интерфейсы у всех разные). С помощью SNMP можно настроить
+используя один интерфейс. </p>
+
+<p class=Normal>SNMP служит примером системы управления, в которой для
+достижения нужного результата не выдается команда, а осуществляется обмен
+информацией, решение принимается &quot;на месте&quot; в соответствии с
+полученными данными. </p>
+
+<p class=Normal><b><u>Объекты сети: </u></b></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Сервера управления. Порт по умолчанию 162. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Клиенты - сетевая станция, на который находится агент
+(программный модуль), позволяющий серверу управлять и наблюдать за ней. Порт по
+умолчанию 161. </p>
+
+<p class=Normal><b><u>Компоненты SNMP: </u></b></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Протокол SNMP</b> (<b>Simple Network Management Protocol)</b>
+- простой протокол управления сетью, протокол прикладного уровня, работает по
+умолчанию поверх транспортного протокола <b>UDP,</b> но может работать по TCP.</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>SMI - (Structure of Management Information)</span></b><span
+lang=EN-US> - </span>структура информации управления<span lang=EN-US>. </span></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b><span lang=EN-US>MIB (Management Information Base)</span></b><span
+lang=EN-US> - </span>информационная база управления<span lang=EN-US>. </span></p>
+
+<p class=Normal><b><u><span style='color:blue'>Протокол BOOTP</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal>Создан для загрузки бездисковых машин. </p>
+
+<p class=Normal>BOOTP является прототипом DHCP, в DHCP есть все, что было в
+BOOTP. </p>
+
+<b><u><span style='font-size:12.0pt;font-family:"Times New Roman";color:blue;
+layout-grid-mode:line'><br clear=all style='page-break-before:always'>
+</span></u></b>
+
+<p class=Normal><b><u><span style='color:blue'>Служба DHCP</span></u></b><span
+style='color:blue'> </span></p>
+
+<p class=Normal><b><u>DHCP</u> (Dynamic Host Configuration Protocol) </b>-
+протокол динамической конфигурации хоста. </p>
+
+<p class=Normal>DHCP является расширением и дополнением протокола BOOTP,
+который предназначен для выдачи IP-адресов бездисковым машинам. </p>
+
+<p class=Normal>DHCP построен по схеме клиент-сервер. </p>
+
+<p class=Normal>Сервер должен отвечать на пакеты с IP-адресом 255.255.255.255,
+т.к. клиент может не знать где находится (какая IP-сеть, какой IP-адрес у
+DHCP). </p>
+
+<p class=Normal>Порт сервера по умолчанию 67. </p>
+
+<p class=Normal>Порт клиента по умолчанию 68. </p>
+
+<p class=Normal>Механизмы выделения IP-адресов сервером DHCP: </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Динамическое присвоение - присваивает клиенту IP-адрес на
+ограниченное время. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>Ручное выделение - IP-адрес клиента привязывается к адресу
+канального уровня (MAC-адрес для Ethrnet) клиента в базе DHCP, сетевым
+администратором. </p>
+
+<p class=Normal>Основные компоненты службы:</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>DHCP клиент </b></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>DHCP сервер </b></p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Relay Agent</b> (агент пересылки) - хост (маршрутизатор),
+который осуществляет связь между клиентом и сервером DHCP. </p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><b>Binding</b> (сопряжение) - совокупность конфигурационных
+параметров, включая, как минимум, IP-адрес, присваиваемый DHCP-клиенту.<br>
+<br>
+</p>
+
+<p class=Normal><b><u><span style='color:blue'>Механизм динамического выделения
+адресов</span></u></b><span style='color:blue'> </span></p>
+
+<p class=Normal>Выделение происходит при обмене сообщений между сервером и
+клиентом.</p>
+
+<p class=Normal>Алгоритм получения:</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+посылает запрос DHCPDISCOVER всем серверам DHCP.</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>2.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Все
+активные серверы посылают ответ DHCPOFFER. Клиент принимает все ответы, инициализацию
+делает по адресу канального уровня (MAC-адрес для Ethrnet).</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+выбирает один из предложенных адресов и посылает сообщение DHCPREQUEST, которое
+должно содержать параметр <b>Server Identifier</b>, чтобы указать, какой сервер
+им выбран.</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Сервер
+посылает ответ DHCPACK.</p>
+
+<p class=Normal style='margin-left:36.0pt;text-indent:-18.0pt'>5.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Клиент
+может работать.</p>
+
+</div>
+
+</body>
+
+</html>

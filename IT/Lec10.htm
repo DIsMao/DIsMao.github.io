@@ -1,0 +1,549 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1251">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 10">
+<meta name=Originator content="Microsoft Word 10">
+<link rel=File-List href="Lec10.files/filelist.xml">
+<title>Лекция 10. Регистратуры Internet. Автономные системы. Служба Whois.
+Динамическая маршрутизация. Протоколы RIP, OSPF</title>
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>BestFit</w:Zoom>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.normal, li.normal, div.normal
+	{mso-style-name:normal;
+	margin-top:5.0pt;
+	margin-right:0cm;
+	margin-bottom:5.0pt;
+	margin-left:0cm;
+	mso-pagination:widow-orphan;
+	layout-grid-mode:char;
+	font-size:12.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";}
+span.hyperlink
+	{mso-style-name:hyperlink;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+@page Section1
+	{size:595.3pt 841.9pt;
+	margin:49.65pt 63.65pt 2.0cm 63.65pt;
+	mso-header-margin:35.4pt;
+	mso-footer-margin:35.4pt;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Обычная таблица";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";}
+</style>
+<![endif]-->
+</head>
+
+<body lang=RU link=blue vlink=purple style='tab-interval:35.4pt'>
+
+<div class=Section1>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><span
+style='font-size:14.0pt;color:red'>Интернет - технологии</span></b></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><span
+style='font-size:14.0pt;color:blue'>Лекция 10</span></b></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><span
+style='font-size:14.0pt;color:maroon'>Регистратуры </span></b><b><span
+lang=EN-US style='font-size:14.0pt;color:maroon;mso-ansi-language:EN-US'>Internet</span></b><b><span
+style='font-size:14.0pt;color:maroon'>. Автономные системы. Служба Whois.
+Динамическая маршрутизация. Протоколы RIP, OSPF.</span></b></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><span
+style='font-size:14.0pt;color:red'>&nbsp;</span></b></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+lang=EN-US style='font-size:14.0pt;color:blue;mso-ansi-language:EN-US'>1. </span></u></b><b><u><span
+style='font-size:14.0pt;color:blue'>Регистратуры </span></u></b><b><u><span
+lang=EN-US style='font-size:14.0pt;color:blue;mso-ansi-language:EN-US'>Internet</span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+12.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>1.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>IANA - The Internet Assigned Numbers Authority</span></b><span
+style='font-size:14.0pt'> (Управление назначением адресов в Internet) -
+организация, осуществляющая контроль за распределением всего пространства
+Internet адресов, включая IP-адреса. IANA выделяет адресное пространство
+Региональным регистратурам в соответствии с их потребностями. Сервер <a
+href="javascript:if(confirm('http://www.iana.org/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.iana.org/'"><span
+class=hyperlink>http://www.iana.org/</span></a> .<br>
+<b><br>
+Главная </b>база данных по сетям, поддерживаемых Регистрационной службой
+Интернет (InterNIC - <a
+href="javascript:if(confirm('http://www.internic.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.internic.net/'"><span
+class=hyperlink>www.internic.net</span></a>). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+12.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>2.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>RIR - Regional Internet Registry </span></b><span
+style='font-size:14.0pt'>(Региональная регистратура Internet) - организация,
+занимающаяся распределением адресного пространства в пределах одного из
+регионов (Северная Америка, Латинская Америка, Европа, Азия). Региональные
+регистратуры осуществляют координацию деятельности Локальных регистратур. <br>
+<b><br>
+Северная Америка</b> и Африка ниже экватора -<b> </b>поддерживается ARIN
+(American Registry for Internet Numbers) <a
+href="javascript:if(confirm('http://www.arin.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.arin.net/'"><span
+class=hyperlink>http://www.arin.net/</span></a> .<b><br>
+Латинская Америка и Караибские острова - </b>поддерживается LACNIC (Regional
+Latin-American and Caribbean IP Address Registry) <a
+href="javascript:if(confirm('http://lacnic.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://lacnic.net/'"><span
+class=hyperlink>http://lacnic.net/</span></a><b> .<br>
+Европа</b> ближний восток, центральная Азия, Африка до экватора - база данных
+поддерживается RIPE Network Coordination Centre (RIPE NCC) <a
+href="javascript:if(confirm('http://www.ripe.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.ripe.net/'"><span
+class=hyperlink>http://www.ripe.net/</span></a>. <br>
+<b>&nbsp;Азия</b> и Тихоокеанский регион - поддерживается APNIC (Asia Pacific
+Network Information Centre) <a
+href="javascript:if(confirm('http://www.apnic.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.apnic.net/'"><span
+class=hyperlink>http://www.apnic.net/</span></a> .</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+12.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>3.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>LIR - Local Internet Registries </span></b><span
+style='font-size:14.0pt'>(Локальная регистратура Internet) - организация,
+занимающаяся распределением адресного пространства пользователям сетей
+(сервис-провайдерам и их абонентам) и оказанием сопутствующих регистрационных
+услуг. Как правило, Локальными регистратурами управляют крупные
+сервис-провайдеры и корпоративные сети. <br>
+<b>LIR'ы делятся на:<br>
+</b>Extra large – очень большие<br>
+Large - большие<br>
+Medium - средние<br>
+Small - маленькие<br>
+Extra small – очень маленькие<b><br>
+<br>
+Самая большая (Extra large) российская LIR</b> - РосНИИРОС (Российский НИИ
+Развития Общественных Сетей) <a
+href="javascript:if(confirm('http://www.ripn.net/%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://www.ripn.net/'"><span
+class=hyperlink>http://www.ripn.net</span></a> .<br style='mso-special-character:
+line-break'>
+<![if !supportLineBreakNewLine]><br style='mso-special-character:line-break'>
+<![endif]></span></p>
+
+<span style='font-size:14.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:RU;mso-fareast-language:RU;mso-bidi-language:
+AR-SA;layout-grid-mode:line'><br clear=all style='page-break-before:always'>
+</span>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span lang=EN-US style='font-size:
+14.0pt;mso-ansi-language:EN-US'>4.</span><span lang=EN-US style='font-size:
+7.0pt;mso-ansi-language:EN-US'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span lang=EN-US style='font-size:14.0pt;mso-ansi-language:EN-US'>ISP</span></b><span
+lang=EN-US style='font-size:14.0pt;mso-ansi-language:EN-US'> - I<b>nternet
+Service Provider</b> (</span><span style='font-size:14.0pt'>сервис</span><span
+lang=EN-US style='font-size:14.0pt;mso-ansi-language:EN-US'>-</span><span
+style='font-size:14.0pt'>провайдер</span><span lang=EN-US style='font-size:
+14.0pt;mso-ansi-language:EN-US'> Internet) - </span><span style='font-size:
+14.0pt'>поставщик услуг</span><span lang=EN-US style='font-size:14.0pt;
+mso-ansi-language:EN-US'> Internet. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>5.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>End-user</span></b><span style='font-size:14.0pt'>
+(конечный пользователь) - организация, которая использует выделенное ей
+адресное пространство для работы своих сетей и подключенная к сети Internet. </span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+lang=EN-US style='font-size:14.0pt;color:blue;mso-ansi-language:EN-US'>2.
+Автономные системы</span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Кроме раздачи
+IP-адресов нужно управлять еще маршрутизацией пакетов. Управлять централизовано
+было бы сложно. Поэтому Inter</span><span lang=EN-US style='font-size:14.0pt;
+mso-ansi-language:EN-US'>n</span><span style='font-size:14.0pt'>et разбит на <b>автономные
+системы</b> - &nbsp;сети находящиеся под одним административным контролем. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Autonomous System
+(Автономная система) </span></b><span style='font-size:14.0pt'>- группа
+маршрутизаторов (шлюзов) из одной административной области, взаимодействующих с
+другими автономными системами.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Используются: </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Wingdings'>&Oslash;</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>внешний протокол маршрутизации (External
+Gateway Protocol – <b>EGP)</b></span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Wingdings'>&Oslash;</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>внутренний протокол маршрутизации
+(Interior Gateway Protocol - <b>IGP</b>). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Автономные системы
+регистрируются в RIR's. </span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+style='font-size:14.0pt;color:blue'>3. </span></u></b><b><u><span lang=EN-US
+style='font-size:14.0pt;color:blue;mso-ansi-language:EN-US'>Служба Whois</span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Последняя версия <a
+href="javascript:if(confirm('http://ipm.kstu.ru/internet/doc/rfc/rfc954.txt%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://ipm.kstu.ru/internet/doc/rfc/rfc954.txt'"><span
+class=hyperlink>RFC0954</span></a> октябрь 1985 года. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Стандартный порт 43. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>С ее помощью можно
+получить дополнительную информацию о доменных именах, сетях и т.д. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Программа, как правило,
+встроена в UNIX системы, но в Windows Whois нет. В Windows можно использовать
+программу CyberKit. </span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+style='font-size:14.0pt;color:blue'>4. Динамическая маршрутизация.</span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Сопровождая большие
+сети с большим количеством маршрутизаторов, становится сложно заполнять таблицы
+маршрутов, и особенно их оперативно менять, если, к примеру, какой то из
+каналов не работает. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Для создания
+динамической маршрутизации необходимо, что бы маршрутизаторы сами обменивались маршрутной
+информацией. Для этого были созданы специальные протоколы. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>В маршрутизаторе с
+динамическим протоколом резидентно загруженная программа (демон - gated или
+routed для UNIX) изменяет таблицы маршрутизации на основе информации,
+полученной от соседних маршрутизаторов. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Динамические протоколы
+делят на две группы: </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span style='font-size:14.0pt'>EGP (External Gateway Protocol)</span></b><span
+style='font-size:14.0pt'> - внешний протокол маршрутизации для использования
+между AS. В группу входят - <b>RIP, OSPF</b>. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><b><span style='font-size:14.0pt'>IGP (Interior Gateway Protocol)</span></b><span
+style='font-size:14.0pt'> - внутреннего протокола маршрутизации для
+использования внутри AS. В группу входят - <b>BGP</b>, <b>IDPR. </b></span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+style='font-size:14.0pt;color:blue'>5. Протокол RIP </span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>RIP (Routing
+Information Protocol)</span></b><span style='font-size:14.0pt'> - протокол
+маршрутной информации, использует алгоритм Белмана-Форда. Выбирается самый
+короткий маршрут (distance-vector). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Последняя версия <b>RIPv2
+</b><a
+href="javascript:if(confirm('http://ipm.kstu.ru/internet/doc/rfc/rfc2453.txt%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://ipm.kstu.ru/internet/doc/rfc/rfc2453.txt'"><span
+class=hyperlink>RFC2453</span></a> - ноябрь 1998. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Используется
+транспортный протокол <b>UDP</b>. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Порт сервера по
+умолчанию 520. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Маршрут характеризуется
+<b>вектором расстояния</b> до места назначения. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Описания собранных
+маршрутов хранятся в <b>таблице маршрутов</b> (не путать с таблицей
+маршрутизации)<b>,</b> из которой потом выбирается наилучший маршрут и помещается
+в таблицу маршрутизации, ее еще называют <b>первичной таблицей маршрутизации</b>.
+</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Таблица маршрутов
+должна содержать<b> </b>для каждого маршрута: </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>IP-адрес места назначения (направление
+вектора). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Метрика маршрута (от 1 до 15; число шагов
+до места назначения, модуль вектора). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>IP-адрес ближайшего маршрутизатора по
+пути к месту назначения. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Флаг, что маршрутная информация была
+изменена. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Различные таймеры маршрута (например,
+актуальности информации) </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><u><span style='font-size:14.0pt'>Порядок работы</span></u></b><span
+style='font-size:14.0pt'> </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Порядок работы:</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>1.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>Запрос &quot;Аутентификация&quot;</span></b><span
+style='font-size:14.0pt'>. Когда демон стартует, он посылает запрос к
+маршрутизаторам прислать таблицы маршрутизации. Запрос рассылается
+широковещательными сообщениями. Формат запроса см. ниже. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>2.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>Периодические отклики - </span></b><span
+style='font-size:14.0pt'>Каждые 30 сек маршрутизатор посылает широковещательно
+копию своей маршрутной таблицы соседним маршрутизаторам. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>3.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>Запрос принят.</span></b><span style='font-size:14.0pt'>
+<br>
+- Если был запрос &quot;Аутентификация&quot; отправляется полная таблица
+маршрутизации. <br>
+Возвращается ответ </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>4.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>Ответ принят</span></b><span style='font-size:14.0pt'>.
+Если ответ признан корректным, таблица маршрутизации может быть обновлена. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt'>5.</span><span
+style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><b><span
+style='font-size:14.0pt'>Незапланированное обновление. </span></b><span
+style='font-size:14.0pt'>Происходит в том случае, если изменяется метрика
+маршрута. В этом случае нет необходимости посылать таблицу маршрутизации целиком,
+передается только та запись, которая была изменена. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>&nbsp;</span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+style='font-size:14.0pt;color:blue'>6. Протокол OSPF</span></u></b><span
+style='font-size:14.0pt;color:blue'> </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>OSPF (Open Shortest
+Path First)</span></b><span style='font-size:14.0pt'> - открыть наикратчайший
+маршрут первым (алгоритм Дикстры), является протоколом состояния канала
+(link-state). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Последняя версия <b>OSPFv2</b>
+- <a
+href="javascript:if(confirm('http://ipm.kstu.ru/internet/doc/rfc/rfc2328.txt%20%20\n\nThis%20file%20was%20not%20retrieved%20by%20Teleport%20Pro,%20because%20it%20is%20addressed%20on%20a%20domain%20or%20path%20outside%20the%20boundaries%20set%20for%20its%20Starting%20Address.%20%20\n\nDo%20you%20want%20to%20open%20it%20from%20the%20server?'))window.location='http://ipm.kstu.ru/internet/doc/rfc/rfc2328.txt'"><span
+class=hyperlink>RFC2328</span></a> апрель 1998. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><span style='font-size:14.0pt'>Основные достоинства
+OSPF. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Отсутствие ограничения на размер сети. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Автономная система может быть поделена на
+области маршрутизации. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Высокая скорость установления маршрутов. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Маршрутизация учитывает тип сервиса IP
+(type-of-service - ToS), т.е. для разных сервисов могут быть разные маршруты. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Каждому интерфейсу может быть назначена
+метрика на основании <br>
+- пропускной способности<br>
+- времени возврата<br>
+- надежности <br>
+- загруженности (очередь пакетов)<br>
+- размера максимального блока данных, который может быть передан через канал. <br>
+Отдельная цена может быть назначена для каждого типа сервиса IP. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Если маршруты имеют одинаковую цену, OSPF
+распределяет траффик поровну между этими маршрутами. Это называется
+балансировкой нагрузки (Load balancing). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Поддерживает подсети (маску). </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Поддержка без адресных сетей (unnumbered)
+- каналы точка-точка между маршрутизаторами, не имеющими IP адресов. Такой
+подход позволяет сэкономить IP адреса. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Использование аутентификации. </span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm;text-indent:-18.0pt'><span style='font-size:14.0pt;
+font-family:Symbol'>·</span><span style='font-size:7.0pt'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='font-size:14.0pt'>Используется групповая (multicast)
+адресация вместо широковещательной. </span></p>
+
+<p class=normal align=center style='margin-top:5.0pt;margin-right:68.05pt;
+margin-bottom:5.0pt;margin-left:1.0cm;text-align:center'><b><u><span
+style='font-size:14.0pt;color:blue'>7. Виды маршртизаторов OSPF</span></u></b></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Маршрутизатор
+опорной сети</span></b><span style='font-size:14.0pt'> (Backbone Router - BR) -
+подключен к опорной сети.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Граничный
+маршрутизатор области</span></b><span style='font-size:14.0pt'> (Area Border
+Router - ABR) - подключен к нескольким областям.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Граничный
+маршрутизатор автономной системы </span></b><span style='font-size:14.0pt'>(Autonomous
+System Boundady Router - ASBR) - подключен к другим автономным системам.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Внутренний
+маршрутизатор</span></b><span style='font-size:14.0pt'> (Internal Router - IR)
+- все его подключения только внутри одной области.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Ответственный маршрутизатор</span></b><span
+style='font-size:14.0pt'> (Designated Router - DR) - собирает и раздает
+маршрутную информацию в области. В OSPF существует иерархия маршрутизаторов.</span></p>
+
+<p class=normal style='margin-top:5.0pt;margin-right:68.05pt;margin-bottom:
+5.0pt;margin-left:1.0cm'><b><span style='font-size:14.0pt'>Резервный
+ответственный маршрутизатор</span></b><span style='font-size:14.0pt'> (Backup
+Designated Router - DR) - резервирует DR.</span></p>
+
+</div>
+
+</body>
+
+</html>
