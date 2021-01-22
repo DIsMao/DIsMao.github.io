@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+<script type="text/javascript" src="rool.js"></script>
+    <style>
+      header{
+display:flex;
+        background:black;
+        flex-wrap:wrap;
+        justify-content:center;
+      position: absolute;
+      width: 100%;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+}
+      logo{
+        width:3%;
+        background:red;
+}
+      main{
+display:flex;
+background-color:rgb(34, 34, 34);
+flex-wrap: wrap;
+flex-direction: column;
+align-items: center;
+
+}
+     rool{
+        margin-left:2%; margin-right:2%;margin-top: 10px;margin-bottom:10px;margin-top: 60px;
+        height:700px;
+        width:80%;
+        background-color:gray;
+        overflow:hidden;
+        position:relative;
+
+}
+      .content1{
+        width:60%;
+        height:40%;
+        background:red;
+        position:absolute;
+        top:30%;
+        left:20%;
+        z-index:2;
+        display: block;
+        transition-duration:1s ;
+      }
+      .content2{ 
+        transition-duration:1s ;
+        width:50%;
+        height:30%;
+        background:#3600ff;
+        position:absolute;
+        top:35%;
+        left:5%;
+        z-index:1;
+      }
+      .content3{
+        transition-duration:1s ;
+        width:50%;
+        height:30%;
+        background:green;
+        position:absolute;
+        top:35%;
+        left:45%;
+        z-index:1;
+      }
+body{
+  background-color:rgb(34, 34, 34);
+}
+
+
+
+.box2{
+       margin:2%;
+display:inline-flex;
+width:400px;
+  height: 550px;
+    background-image: url(http://xn----7sbbg1bmrzgd.xn--p1ai/image/data/SIimon-XXXXjpg.jpg);
+      border-radius:10%; 
+}
+     .box3{
+display:flex;
+
+transition-duration:1s;
+
+visibility:hidden;
+
+border-radius:10%;
+     width:400px;
+       height:550px;  
+       flex-wrap:wrap;
+       align-content:space-between;
+     }
+     .boxtop{
+       display:flex;
+       
+         height: 10%;
+       width:100%;
+       justify-content: flex-end;
+}
+     .boxbottom{
+height:47%;
+display:flex;
+
+width:100%;
+       
+      flex-direction:column;
+  
+}
+     .bottomtext{
+       display:flex;
+font-size:42pt;
+       padding-top:4%;
+       padding-left:4%;
+
+transition-duration:1s;
+
+     color:transparent;
+
+       
+}
+     .bottomtext2{
+font-size:32pt;
+display:flex;
+       padding-left:10%;
+
+     color:transparent;
+
+       transition-duration:1s;  
+}
+     .topico{
+display:flex;
+    width:   40px;
+       height:40px;
+
+transition-duration:1s;
+
+       border-radius:50%;
+       margin:10%;
+       align-content: center;
+     justify-content: center;
+       flex-wrap:wrap;
+}
+   .topico2{
+display:inline-flex;
+    width:   30px;
+       height:30px;
+
+transition-duration:1s;
+
+       border-radius:50%;
+       
+
+}  
+div.box2:hover .box3{
+       background-color: rgba(255,0,0,.52);
+visibility:visible;
+
+}
+
+div.box2:hover .boxtop{
+
+visibility:visible;
+
+transition-duration:1s;
+
+}
+
+div.box2:hover .topico{
+
+       background-color:white;
+
+transition-duration:1s;
+
+}
+
+div.box2:hover .topico2{
+
+transition-duration:1s;
+
+       background-color:rgba(0,0,0,.39);
+
+}
+
+div.box2:hover .bottomtext2{
+
+transition-duration:1s;
+
+       color:white;
+}
+
+div.box2:hover .bottomtext{
+
+transition-duration:1s;
+
+       color:white;
+}
+.ntbks{
+  display: flex;
+flex-wrap: wrap;
+justify-content: center;
+  
+}
+
+    </style>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <!--<script defer src="script.js"></script>-->
+  </head>
+  <body>
+    
+    <header>
+     <logo><img style="object-fit:cover; width  :100%; height:100%;" src="123.png"></logo>
+    </header>
+        <main>
+          <rool>
+<div class="content2" onclick="out()" id="out" >2</div> 
+<div class="content3" onclick="out2()" id="out2" >2</div>
+<div class="content1" onclick="out3()" id="out3">1</div>
+
+      </rool>
+
+   
+    <div class="ntbks">
+      <div class="box2">
+        <div class="box3">
+          <div class="boxtop">
+            <div class="topico">
+              <div class="topico2">
+                
+              </div>
+            </div>
+          </div>
+          <div class="boxbottom"> </b>
+            <b><div class="bottomtext">Привет</div> </b>
+              <b><div class="bottomtext2">Один: 1234</div> </b>
+                <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                  <b> <div class="bottomtext2">Три: 1234</div> </b>
+          </div>
+        </div>
+        </div>
+        <div class="box2">
+          <div class="box3">
+            <div class="boxtop">
+              <div class="topico">
+                <div class="topico2">
+                  
+                </div>
+              </div>
+            </div>
+            <div class="boxbottom"> </b>
+              <b><div class="bottomtext">Привет</div> </b>
+                <b><div class="bottomtext2">Один: 1234</div> </b>
+                  <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                    <b> <div class="bottomtext2">Три: 1234</div> </b>
+            </div>
+          </div>
+          </div>
+          <div class="box2">
+            <div class="box3">
+              <div class="boxtop">
+                <div class="topico">
+                  <div class="topico2">
+                    
+                  </div>
+                </div>
+              </div>
+              <div class="boxbottom"> </b>
+                <b><div class="bottomtext">Привет</div> </b>
+                  <b><div class="bottomtext2">Один: 1234</div> </b>
+                    <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                      <b> <div class="bottomtext2">Три: 1234</div> </b>
+              </div>
+            </div>
+            </div>
+            <div class="box2">
+              <div class="box3">
+                <div class="boxtop">
+                  <div class="topico">
+                    <div class="topico2">
+                      
+                    </div>
+                  </div>
+                </div>
+                <div class="boxbottom"> </b>
+                  <b><div class="bottomtext">Привет</div> </b>
+                    <b><div class="bottomtext2">Один: 1234</div> </b>
+                      <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                        <b> <div class="bottomtext2">Три: 1234</div> </b>
+                </div>
+              </div>
+              </div>
+              <div class="box2">
+                <div class="box3">
+                  <div class="boxtop">
+                    <div class="topico">
+                      <div class="topico2">
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="boxbottom"> </b>
+                    <b><div class="bottomtext">Привет</div> </b>
+                      <b><div class="bottomtext2">Один: 1234</div> </b>
+                        <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                          <b> <div class="bottomtext2">Три: 1234</div> </b>
+                  </div>
+                </div>
+                </div>
+                <div class="box2">
+                  <div class="box3">
+                    <div class="boxtop">
+                      <div class="topico">
+                        <div class="topico2">
+                          
+                        </div>
+                      </div>
+                    </div>
+                    <div class="boxbottom"> </b>
+                      <b><div class="bottomtext">Привет</div> </b>
+                        <b><div class="bottomtext2">Один: 1234</div> </b>
+                          <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                            <b> <div class="bottomtext2">Три: 1234</div> </b>
+                    </div>
+                  </div>
+                  </div>
+                  <div class="box2">
+                    <div class="box3">
+                      <div class="boxtop">
+                        <div class="topico">
+                          <div class="topico2">
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <div class="boxbottom"> </b>
+                        <b><div class="bottomtext">Привет</div> </b>
+                          <b><div class="bottomtext2">Один: 1234</div> </b>
+                            <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                              <b> <div class="bottomtext2">Три: 1234</div> </b>
+                      </div>
+                    </div>
+                    </div>
+                    <div class="box2">
+                      <div class="box3">
+                        <div class="boxtop">
+                          <div class="topico">
+                            <div class="topico2">
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="boxbottom"> </b>
+                          <b><div class="bottomtext">Привет</div> </b>
+                            <b><div class="bottomtext2">Один: 1234</div> </b>
+                              <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                                <b> <div class="bottomtext2">Три: 1234</div> </b>
+                        </div>
+                      </div>
+                      </div>
+                      <div class="box2">
+                        <div class="box3">
+                          <div class="boxtop">
+                            <div class="topico">
+                              <div class="topico2">
+                                
+                              </div>
+                            </div>
+                          </div>
+                          <div class="boxbottom"> </b>
+                            <b><div class="bottomtext">Привет</div> </b>
+                              <b><div class="bottomtext2">Один: 1234</div> </b>
+                                <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                                  <b> <div class="bottomtext2">Три: 1234</div> </b>
+                          </div>
+                        </div>
+                        </div>
+                        <div class="box2">
+                          <div class="box3">
+                            <div class="boxtop">
+                              <div class="topico">
+                                <div class="topico2">
+                                  
+                                </div>
+                              </div>
+                            </div>
+                            <div class="boxbottom"> </b>
+                              <b><div class="bottomtext">Привет</div> </b>
+                                <b><div class="bottomtext2">Один: 1234</div> </b>
+                                  <b>  <div class="bottomtext2">Два: 1234</div> </b>
+                                    <b> <div class="bottomtext2">Три: 1234</div> </b>
+                            </div>
+                          </div>
+                          </div>
+        </div>
+                </main>
+
+
+
+  </body>
+</html>
