@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <script type="text/javascript" src="img.js"></script>
+	<script src='jquery-3.5.1.min.js'></script>
+	<script src='jquery.elevatezoom.js'></script>
+
     <style>
         .div{
             display: flex;
@@ -18,8 +20,11 @@
 </head>
 
 
-<div class="div" id="xy"><img class="xy" style="object-fit:cover;transform: scale(2) translate(100%,100%);height:50px ;width: 50px; " src="123.png" alt=""  ></div>
+<img id="zoom_mw" src="apple-icon-57x57.png" data-zoom-image="123.png" />
 
+<script>
+    $("#zoom_mw").elevateZoom({scrollZoom : true});
+    </script>
 
 </body>
 </html>
