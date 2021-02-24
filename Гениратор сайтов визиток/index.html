@@ -10,7 +10,9 @@
 </head>
 
 <body class="body">
-
+    <div class="trigger">Trigger</div>
+    <div class="result"></div>
+    <div class="log"></div>
 
         <div class="toolbar">
         <a href="#" class="toolbar-b fas fa-bold" title="Жирный">Жирный</a>
@@ -65,7 +67,16 @@
 
  <script type="text/javascript" src="JS\jquery-ui.js"></script>
 
-
+ <script>
+    $( document ).ajaxComplete(function() {
+        $( ".log" ).text( "Triggered ajaxComplete handler." );
+      });
+      
+      $( ".trigger" ).click(function() {
+      $( ".result" ).load( "test.html" );
+    });
+    
+      </script>
 </body>
 
 </html>
