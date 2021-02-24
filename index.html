@@ -1,10 +1,9 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  
+
   <title>Жека гей</title>
 
   <link rel="apple-touch-icon" sizes="57x57" href="DIsMao.github.io/ico/apple-icon-57x57.png">
@@ -16,7 +15,7 @@
   <link rel="apple-touch-icon" sizes="144x144" href="DIsMao.github.io/ico/apple-icon-144x144.png">
   <link rel="apple-touch-icon" sizes="152x152" href="DIsMao.github.io/ico/apple-icon-152x152.png">
   <link rel="apple-touch-icon" sizes="180x180" href="DIsMao.github.io/ico/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="DIsMao.github.io/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="DIsMao.github.io/ico/android-icon-192x192.png">
   <link rel="icon" type="image/png" sizes="32x32" href="DIsMao.github.io/ico/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="96x96" href="DIsMao.github.io/ico/favicon-96x96.png">
   <link rel="icon" type="image/png" sizes="16x16" href="DIsMao.github.io/ico/favicon-16x16.png">
@@ -28,402 +27,484 @@
   <link rel="stylesheet" type="text/css" href="https://dismao.github.io/DIsMao.github.io/wow-animation/animate.min.css">
   <link href="https://dismao.github.io/DIsMao.github.io/Hover-master/css/hover-min.css" rel="stylesheet">
   <link href="https://dismao.github.io/DIsMao.github.io/Hover-master/css/hover.css" rel="stylesheet" media="all">
-  
 
-<style>
-.gray {
-    background-image: url(https://dismao.github.io/DIsMao.github.io/ico/apple-icon-57x57.png);
-    width:57px;
-    height: 57px;
-    display: block;
-}
-
-
-  body {
- background-color:blueviolet;
-
-}
-.box1{
-  display:flex;
- 
-  flex-wrap: wrap;
-  align-content: center; 
-  
-  justify-content: flex-end;
-  flex-direction: column;
-  
-  height: 380px;
-  width: 100%;
-}
-
-
-
-
-#blink5 {
-  -webkit-animation: blink5 2s linear infinite;
-  animation: blink5 2s linear infinite;
-}
-@-webkit-keyframes blink5 {
-  30% { color: rgb(253, 0, 253); }
-  50% { color: rgb(172, 183, 14); }
-  100% { color: rgb(255, 2, 2); }
-  50% { color: rgb(172, 183, 14); }
-  30% { color: rgb(253, 0, 253); }
-}
-@keyframes blink5 {
-  30% { color: rgb(253, 0, 253); }
-  50% { color: rgb(172, 183, 14); }
-  100% { color: rgb(255, 2, 2); }
-  50% { color: rgb(172, 183, 14); }
-  30% { color: rgb(253, 0, 253); }
-}
-
-
-
-.box1 div:nth-of-type(1) {
-  font-size: calc(2em + 4vw);
-  height: 100px;
-  align-content: flex-end; 
-  line-height: 100px; /* задаем высоту строки */
-
-text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
-text-align : center;
-}
-.box1 div:nth-of-type(2) {
-  font-size: calc(0.2em + 4vw);
-  height: 150px;
-  align-content: flex-end; 
-  line-height: 100px; /* задаем высоту строки */
-
-text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
-text-align : center;
-}
-
 
+  <style>
+    .gray {
+      background-image: url(https://dismao.github.io/DIsMao.github.io/ico/apple-icon-57x57.png);
+      width: 57px;
+      height: 57px;
+      display: block;
+    }
 
 
+    body {
+      background-color: blueviolet;
 
+    }
 
+    .box1 {
+      display: flex;
 
+      flex-wrap: wrap;
+      align-content: center;
 
+      justify-content: flex-end;
+      flex-direction: column;
 
-	
-.catside a:hover {
-  background: #0078BF; color: #fff;
-}
+      height: 380px;
+      width: 100%;
+    }
 
 
-body {
-  font-family: sans-serif;
-}
 
-@media (max-width: 600px) {
-  .site-header {
-    flex-wrap: wrap;
-    
-  }
 
-  .site-nav {
-    order: 2;
-    background: #333;
-    width: 100%;
-  }
-}
-.site-header {
-  
-  background: #b900a1;
-  color: white;
-  display: flex;
-  align-items: center;
-  width: 99%;
-  position:fixed;
-  top: 0;
-}
+    #blink5 {
+      -webkit-animation: blink5 2s linear infinite;
+      animation: blink5 2s linear infinite;
+    }
 
-.logo {
-  text-decoration: none;
-  color: white;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 10px;
-}
+    @-webkit-keyframes blink5 {
+      30% {
+        color: rgb(253, 0, 253);
+      }
 
-.site-nav ul {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-.site-nav a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #CDD0D0;
-  padding: 20px;
-  display: inline-block;
-}
-.site-nav .active a {
-  font-weight: bold;
-  color: #62DEBE;
-  background: #14604c;
-}
-
-
-
-
-.actions {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
- 
-}
-
-.sign-out-link {
-  color: #62DEBE;
-  font-size: 0.8rem;
-  margin-left: 10px;
-  text-transform: uppercase;
-}
-
-
-
-
-
-.box4 iframe {
-margin: 30px;
-
-align-content: center
-}
-
-
-
-
-
-
-
-.box4{
-  display:flex;
-  flex-wrap: wrap;
-  align-content: center; 
-  
-  justify-content: center;
-  
-  background-color:rgb(54, 0, 104);
-  
-  
-position: relative;
-
-line-height: 100px; /* задаем высоту строки */
-
-text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; /* используем 8 теней в одном объявлении */
-text-align : center;
-border-radius: 60px 60px 60px / 50px 50px;
-}
-
-.box4 hi2{
-  
-  font-size: calc(0.01em + 4vw); 
-
-width: 600px;
-}
-
-
-
-
-.hvr-shutter-in-horizontal 
-{ 
-  background: #ff00ea;
-  
-  }
-
-  .hvr-shutter-in-horizontal:before {
-
-  background: #b900a1;
-
-}
-
-.text-input{ 
- position: relative;
- margin-top: 50px;
-}
- 
- input[type="text"]{
- display: inline-flex;
-
- height: 40px;
- box-sizing: border-box;
- outline: none;
- border: 1px solid lightgray;
- border-radius: 3px;
- padding: 10px 10px 10px 10px;
- 
- }
-
-.vsp{
-  display:flex;
-position: fixed;
-visibility:hidden;
-flex-direction: column;
-color: transparent;
-width: 120px;
-transition-duration: 1s;
-
-}
-.vsp2{
-visibility:hidden;
-color: transparent;
-transition-duration: 1s;
-display: flex;
-
-padding: 10%;
-}
-
-.anim:hover .vsp {
-  visibility:visible;
-color: white;
-transition-duration: 1s;
-background-color: #aa0294;
-}
-.anim:hover .vsp2
-{
-  color: white;
-  visibility:visible;
-  
-}
-div.vsp2:hover  {
-  background-color: #ff00ea;
-}
-.user{
-display: flex;
-align-content: center;
-margin-right: 10px;
-margin-left: auto;
-justify-content: center;
-
-}
-.avatar{
-  background-image: url(https://dismao.github.io/DIsMao.github.io/ico/apple-icon-57x57.png);
-  width: 57px;
-  height: 57px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.vvrh{
-position: fixed; bottom: 0px;
-height:100% ;
-width: 60px;
-left: -50px;
-transition-duration: 2s;
-}
-
-.vvrh2{
-
-height:100% ;
-width: 50px;
-display: flex;
-transition-duration: 2s;
-align-content: center;
-flex-wrap: wrap;
-background-color: #0078BF;
-}
-
-.vvrh2img{
-
-border-radius: 50%;
-height:5% ;
-width: 100%;
-background-color: #bf0000;
-
-}
-.vvrh:hover {
-  left: 0px;
-  transition-duration: 2s;
-}
-.vvrh:hover .vvrh2{
-transition-duration: 2s;
-}
-
-</style>
+      50% {
+        color: rgb(172, 183, 14);
+      }
+
+      100% {
+        color: rgb(255, 2, 2);
+      }
+
+      50% {
+        color: rgb(172, 183, 14);
+      }
+
+      30% {
+        color: rgb(253, 0, 253);
+      }
+    }
+
+    @keyframes blink5 {
+      30% {
+        color: rgb(253, 0, 253);
+      }
+
+      50% {
+        color: rgb(172, 183, 14);
+      }
+
+      100% {
+        color: rgb(255, 2, 2);
+      }
+
+      50% {
+        color: rgb(172, 183, 14);
+      }
+
+      30% {
+        color: rgb(253, 0, 253);
+      }
+    }
+
+
+
+    .box1 div:nth-of-type(1) {
+      font-size: calc(2em + 4vw);
+      height: 100px;
+      align-content: flex-end;
+      line-height: 100px;
+      /* задаем высоту строки */
+
+      text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red;
+      /* используем 8 теней в одном объявлении */
+      text-align: center;
+    }
+
+    .box1 div:nth-of-type(2) {
+      font-size: calc(0.2em + 4vw);
+      height: 150px;
+      align-content: flex-end;
+      line-height: 100px;
+      /* задаем высоту строки */
+
+      text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red;
+      /* используем 8 теней в одном объявлении */
+      text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+    .catside a:hover {
+      background: #0078BF;
+      color: #fff;
+    }
+
+
+    body {
+      font-family: sans-serif;
+    }
+
+    @media (max-width: 600px) {
+      .site-header {
+        flex-wrap: wrap;
+
+      }
+
+      .site-nav {
+        order: 2;
+        background: #333;
+        width: 100%;
+      }
+    }
+
+    .site-header {
+
+      background: #b900a1;
+      color: white;
+      display: flex;
+      align-items: center;
+      width: 99%;
+      position: fixed;
+      top: 0;
+    }
+
+    .logo {
+      text-decoration: none;
+      color: white;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      padding: 10px;
+    }
+
+    .site-nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    .site-nav a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #CDD0D0;
+      padding: 20px;
+      display: inline-block;
+    }
+
+    .site-nav .active a {
+      font-weight: bold;
+      color: #62DEBE;
+      background: #14604c;
+    }
+
+
+
+
+    .actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+
+    }
+
+    .sign-out-link {
+      color: #62DEBE;
+      font-size: 0.8rem;
+      margin-left: 10px;
+      text-transform: uppercase;
+    }
+
+
+
+
+
+    .box4 iframe {
+      margin: 30px;
+
+      align-content: center
+    }
+
+
+
+
+
+
+
+    .box4 {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+
+      justify-content: center;
+
+      background-color: rgb(54, 0, 104);
+
+
+      position: relative;
+
+      line-height: 100px;
+      /* задаем высоту строки */
+
+      text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red;
+      /* используем 8 теней в одном объявлении */
+      text-align: center;
+      border-radius: 60px 60px 60px / 50px 50px;
+    }
+
+    .box4 hi2 {
+
+      font-size: calc(0.01em + 4vw);
+
+      width: 600px;
+    }
+
+
+
+
+    .hvr-shutter-in-horizontal {
+      background: #ff00ea;
+
+    }
+
+    .hvr-shutter-in-horizontal:before {
+
+      background: #b900a1;
+
+    }
+
+    .text-input {
+      position: relative;
+      margin-top: 50px;
+    }
+
+    input[type="text"] {
+      display: inline-flex;
+
+      height: 40px;
+      box-sizing: border-box;
+      outline: none;
+      border: 1px solid lightgray;
+      border-radius: 3px;
+      padding: 10px 10px 10px 10px;
+
+    }
+
+    .vsp {
+      display: flex;
+      position: fixed;
+      visibility: hidden;
+      flex-direction: column;
+      color: transparent;
+      width: 120px;
+      transition-duration: 1s;
+
+    }
+
+    .vsp2 {
+      visibility: hidden;
+      color: transparent;
+      transition-duration: 1s;
+      display: flex;
+
+      padding: 10%;
+    }
+
+    .anim:hover .vsp {
+      visibility: visible;
+      color: white;
+      transition-duration: 1s;
+      background-color: #aa0294;
+    }
+
+    .anim:hover .vsp2 {
+      color: white;
+      visibility: visible;
+
+    }
+
+    div.vsp2:hover {
+      background-color: #ff00ea;
+    }
+
+    .user {
+      display: flex;
+      align-content: center;
+      margin-right: 10px;
+      margin-left: auto;
+      justify-content: center;
+
+    }
+
+    .avatar {
+      background-image: url(https://dismao.github.io/DIsMao.github.io/ico/apple-icon-57x57.png);
+      width: 57px;
+      height: 57px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .vvrh {
+      position: fixed;
+      bottom: 0px;
+      height: 100%;
+      width: 60px;
+      left: -50px;
+      transition-duration: 2s;
+    }
+
+    .vvrh2 {
+
+      height: 100%;
+      width: 50px;
+      display: flex;
+      transition-duration: 2s;
+      align-content: center;
+      flex-wrap: wrap;
+      background-color: #0078BF;
+    }
+
+    .vvrh2img {
+
+      border-radius: 50%;
+      height: 5%;
+      width: 100%;
+      background-color: #bf0000;
+
+    }
+
+    .vvrh:hover {
+      left: 0px;
+      transition-duration: 2s;
+    }
+
+    .vvrh:hover .vvrh2 {
+      transition-duration: 2s;
+    }
+  </style>
 
 
 
 </head>
+
 <body>
-  
-
-<div class="box1">
-  
-  
-  <div class= "wow jello" data-wow-duration="3.5s" data-wow-delay="1s" data-wow-iteration="111111111111" >Жека гей!!!!</div>
 
 
-  <div class= "wow jello" data-wow-duration="3.5s" data-wow-delay="1s" data-wow-iteration="111111111111">Соси письку</div>
+  <div class="box1">
 
-</div>
 
-<div class="box4" >
-  <iframe  class= "wow fadeInUp" data-wow-duration="1.5s"   width="1200" height="675" src="https://www.youtube.com/embed/WB9c5avV8uU?autoplay=1&mute=1" name="youtube embed" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  <div>
-    
-    <hi2 style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;" class="wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="13">Final fantasy</hi2>
-    
-  <iframe class= "wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="13" src="https://www.retrogames.cc/embed/28795-final-fantasy-i-ii-dawn-of-souls-u-independent.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-</div>
+    <div class="wow jello" data-wow-duration="3.5s" data-wow-delay="1s" data-wow-iteration="111111111111">Жека гей!!!!
+    </div>
 
-<div>
-  <hi2 hi2 style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;" class="wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="13">DOOM</hi2>
-  <iframe class= "wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="13" src="https://www.retrogames.cc/embed/41739-doom.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-</div>
 
-<div>
-  <hi2 hi2 style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;" class="wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="20"  >Kingdom Hearts Re</hi2>
-  <iframe class= "wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="20" src="https://www.retrogames.cc/embed/41847-kingdom-hearts-re-coded-europe-en-fr-de-es-it.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-</div>
-<div>
-  <hi2 hi2 style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;" class="wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="20">Kingdom Hearts 358</hi2>
-  <iframe class= "wow fadeInUp" data-wow-duration="1.5s"  data-wow-offset="20" src="https://www.retrogames.cc/embed/39401-kingdom-hearts-358-2-days-europe-en-fr-de-es-it.html" width="600" height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-</div>
-</div>
-<div class="vvrh"><a href="#"><div class="vvrh2" href="#"><div class="vvrh2img"></div></div></a></div>
+    <div class="wow jello" data-wow-duration="3.5s" data-wow-delay="1s" data-wow-iteration="111111111111">Соси письку
+    </div>
 
-<header class="site-header"style="border-radius: 50px 50px 50px / 50px 50px;" >
-  <a href="https://dismao.github.io/page2" class="gray" style="border-radius: 50px 50px 50px / 50px 50px;"></a>
-  
-  <nav class="site-nav">
-    <ul>
-      <li class="hvr-shutter-in-horizontal"><a  href="https://dismao.github.io/">Домой</a></li>
-      <li class="hvr-shutter-in-horizontal"><a href="#0">О нас</a></li>
-      <li class="hvr-shutter-in-horizontal"><a href="#0">Клиенты</a></li>
-      <div class="anim"><li class="hvr-shutter-in-horizontal"><a href="#0">Анимации</a></li>
-        <div class="vsp">
-          
-          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 1</div>
-          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page4.html';">Анимация 2</div>
-          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/page6.html';">Анимация 3</div>
-          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/zoom.html';">Анимация 4</div>
-          <div class="vsp2"  onclick="window.location.href = 'https://dismao.github.io/zoom2.html';">Анимация 5</div>
+  </div>
+
+  <div class="box4">
+    <iframe class="wow fadeInUp" data-wow-duration="1.5s" width="1200" height="675"
+      src="https://www.youtube.com/embed/WB9c5avV8uU?autoplay=1&mute=1" name="youtube embed"
+      allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <div>
+
+      <hi2
+        style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;"
+        class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="13">Final fantasy</hi2>
+
+      <iframe class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="13"
+        src="https://www.retrogames.cc/embed/28795-final-fantasy-i-ii-dawn-of-souls-u-independent.html" width="600"
+        height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+        scrolling="no"></iframe>
+    </div>
+
+    <div>
+      <hi2 hi2
+        style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;"
+        class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="13">DOOM</hi2>
+      <iframe class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="13"
+        src="https://www.retrogames.cc/embed/41739-doom.html" width="600" height="450" frameborder="no"
+        allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+    </div>
+
+    <div>
+      <hi2 hi2
+        style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;"
+        class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="20">Kingdom Hearts Re</hi2>
+      <iframe class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="20"
+        src="https://www.retrogames.cc/embed/41847-kingdom-hearts-re-coded-europe-en-fr-de-es-it.html" width="600"
+        height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+        scrolling="no"></iframe>
+    </div>
+    <div>
+      <hi2 hi2
+        style="margin-left: 30px;display:flex; flex-wrap: wrap; align-content: center; justify-content: center;   line-height: 100px; text-shadow: 0 0 4px white, 0 -5px 4px violet, 2px -10px 6px indigo, -2px -15px 11px blue, 2px -25px 18px green, -2px -40px 25px yellow, 2px -60px 33px orange, 0px -85px 40px red; text-align : center; font-size: calc(0.01em + 4vw); width: 600px;"
+        class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="20">Kingdom Hearts 358</hi2>
+      <iframe class="wow fadeInUp" data-wow-duration="1.5s" data-wow-offset="20"
+        src="https://www.retrogames.cc/embed/39401-kingdom-hearts-358-2-days-europe-en-fr-de-es-it.html" width="600"
+        height="450" frameborder="no" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"
+        scrolling="no"></iframe>
+    </div>
+  </div>
+  <div class="vvrh"><a href="#">
+      <div class="vvrh2" href="#">
+        <div class="vvrh2img"></div>
+      </div>
+    </a></div>
+
+  <header class="site-header" style="border-radius: 50px 50px 50px / 50px 50px;">
+    <a href="https://dismao.github.io/page2" class="gray" style="border-radius: 50px 50px 50px / 50px 50px;"></a>
+
+    <nav class="site-nav">
+      <ul>
+        <li class="hvr-shutter-in-horizontal"><a href="https://dismao.github.io/">Домой</a></li>
+        <li class="hvr-shutter-in-horizontal"><a href="#0">О нас</a></li>
+        <li class="hvr-shutter-in-horizontal"><a href="#0">Клиенты</a></li>
+        <div class="anim">
+          <li class="hvr-shutter-in-horizontal"><a href="#0">Анимации</a></li>
+          <div class="vsp">
+
+            <div class="vsp2" onclick="window.location.href = 'https://dismao.github.io/page3.html';">Анимация 1</div>
+            <div class="vsp2" onclick="window.location.href = 'https://dismao.github.io/page4.html';">Анимация 2</div>
+            <div class="vsp2" onclick="window.location.href = 'https://dismao.github.io/page6.html';">Анимация 3</div>
+            <div class="vsp2" onclick="window.location.href = 'https://dismao.github.io/zoom.html';">Анимация 4</div>
+            <div class="vsp2" onclick="window.location.href = 'https://dismao.github.io/zoom2.html';">Анимация 5</div>
+          </div>
+
+        </div>
+        <input type="text" id="input1" style="margin-top: 10px;">
+        <div class="text-input">
+
+
         </div>
 
+      </ul>
+    </nav>
+
+    <div class="user">
+      <div style="align-content: center; justify-content: center;display: flex;">
+        <p>ЛОГИН:</p>
       </div>
-      <input type="text" id="input1" style = "margin-top: 10px;" >
-      <div class="text-input">
-      
-        
+      <div style="align-content: center; justify-content: center;display: flex;">
+        <p>ЛОГИН:</p>
       </div>
+      <div class="avatar"></div>
+      <div style="align-content: center; justify-content: center;display: flex;">
+        <p>Выйти</p>
+      </div>
+    </div>
 
-    </ul>
-  </nav>
-
-  <div class="user">
-<div style="align-content: center; justify-content: center;display: flex;"><p>ЛОГИН:</p></div>
-<div style="align-content: center; justify-content: center;display: flex;"><p>ЛОГИН:</p></div>
-<div class="avatar"></div>
-<div style="align-content: center; justify-content: center;display: flex;"><p>Выйти</p></div>
-</div>
-  
-</header>
+  </header>
 
 
 
@@ -466,10 +547,11 @@ transition-duration: 2s;
 
 
 
-<script src="https://dismao.github.io/DIsMao.github.io/wow-animation/wow.min.js"></script>
-<script>
+  <script src="https://dismao.github.io/DIsMao.github.io/wow-animation/wow.min.js"></script>
+  <script>
     new WOW().init();
-</script>
+  </script>
 
 </body>
+
 </html>

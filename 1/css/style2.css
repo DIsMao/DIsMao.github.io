@@ -1,0 +1,195 @@
+header{
+    display        : flex;
+    background     : black;
+    flex-wrap      : wrap;
+    justify-content: center;
+    position       : absolute;
+    width          : 100%;
+    z-index        : 1000;
+    left           : 0;
+    top            : 0;
+    box-shadow     : 0 0 10px ;
+    }
+logo{
+            width           : 3%;
+            margin          : 8px auto;
+            background-color: red;
+    }
+.bottommargin{
+    display: block;
+    width  : 100%;
+    height : calc(1em + 3vw);
+    }
+main{
+    display         : flex;
+align-content: flex-start;
+align-items: flex-start;
+    flex-wrap       : wrap;
+    justify-content: center;
+    width: 90%;
+    margin          : 0px auto;
+  
+    min-height: 100%;
+    }
+    body{
+      background-color: rgb(34, 34, 34);
+    height: 100%;
+          }
+          .nzv{
+            display: flex;
+            margin: 10px 5%;
+            font-size: calc(1em + 4vw);
+            width: 100%;
+            color: red;
+            text-shadow: 0 0 10px black;
+            font-family: ‘Source Sans Pro’, sans-serif;
+            font-weight: 900; 
+          }
+
+.ntbks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around ;
+  margin: 10px 1%;
+  flex-basis: 400px;
+}
+.div{
+  display: flex;
+  border: 2px solid black;
+  overflow: hidden;
+position:relative;
+box-shadow: 0 0 10px black;
+}
+.img1{
+  display: flex;
+  width: 20%;
+  transition-duration: 0.2s;
+
+  margin: 8px 8px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+
+}
+.img2{
+  display: flex;
+  width: 20%;
+transition-duration: 0.2s;
+  margin: 8px 8px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+
+.img3{
+  display: flex;
+  width: 20%;
+  transition-duration: 0.2s;
+
+  margin: 8px 8px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+.img4{
+  display: flex;
+  width: 20%;
+  transition-duration: 0.2s;
+
+  margin: 8px 8px;
+  border: 2px solid black;
+  box-shadow: 0 0 10px black;
+}
+.img1:hover{transform: scale(1.1);transition-duration: 0.2s;}
+.img2:hover{transform: scale(1.1);transition-duration: 0.2s;}
+.img3:hover{transform: scale(1.1);transition-duration: 0.2s;}
+.img4:hover{transform: scale(1.1);transition-duration: 0.2s;}
+
+.ops{
+  margin: 10px 2%;
+  margin-bottom: 70px;
+  display: flex;
+  flex-basis: 400px;
+  flex-grow: 1;
+  background-color: rgb(88, 88, 88);
+  box-shadow: 0 0 10px black;
+  flex-wrap: wrap;
+  flex-direction: column;
+  position: relative;
+}
+.topbox{
+  display: flex;
+  background-color: rgb(155, 155, 155);
+  height: calc(1.6em + 2vw);
+  width: 100%;
+  position: absolute;
+  box-shadow:-1px -6px 14px 0px rgba(0,0,0,0.44)inset;
+  flex-wrap: wrap;
+}
+.topboxline{
+  width: 50%;
+  position: absolute;
+  top: 100%;
+  left:0%;
+  height: 4px;
+  background-color: red;
+  transition-duration: 0.5s;
+}
+.btnops{
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: red;
+  text-shadow: 0 0 10px black;
+  font-family: ‘Source Sans Pro’, sans-serif;
+  font-size: calc(0.3em + 2vw);
+  font-weight: bold;
+  transition-duration: 0.9s;
+
+}
+.btnkmpl{
+  display: flex;
+  width: 50%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  color: red;
+  text-shadow: 0 0 10px black;
+  font-family: ‘Source Sans Pro’, sans-serif;
+  font-size: calc(0.3em + 2vw);
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition-duration: 0.9s;
+  
+}
+.btnops:hover{transform: scale(1.1);
+  transition-duration: 0.9s;
+}
+.btnkmpl:hover{transform: scale(1.1);
+  transition-duration: 0.9s;
+}
+.bottombox{
+  box-shadow: 0 0px 50px 1px rgb(0, 0, 0) ; 
+background-color: rgb(88, 88, 88);
+height: 100%;
+padding-top:calc(1.6em + 2vw);
+padding-left:2% ;
+padding-bottom:2% ;
+padding-right:2% ;
+font-size: 16pt;
+font-family: ‘Source Sans Pro’, sans-serif;
+background: linear-gradient(180deg, rgb(189, 189, 189), rgb(105, 105, 105) 100%);
+
+}
+html, body {
+  height: 100%;
+  margin: 0;
+ }
+
+ .footer {
+  height: 60px;
+  margin-top: -60px;
+  background: black;
+  box-shadow     : 0 0 10px ;
+ }

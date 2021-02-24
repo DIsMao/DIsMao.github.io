@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=320, initial-scale=1">
+    <meta charset="utf-8">
+    <style>
+      .a{
+
+        position:relative;
+        width:200px;
+        height:200px;
+        background:#ddd;
+            overflow: hidden;
+
+}
+      .b{
+position:relative;
+        display:flex;
+        width:200px;
+        height:200px;
+        background:#6c6c6c;
+        top:100%;
+        content:'';
+        animation:anim 1s linear ;
+        font-size:70pt;
+animation-fill-mode:forwards;
+      }
+      .b2{
+position:relative;
+        display:flex;
+        width:200px;
+        height:200px;
+        background:#6c6c6c;
+        bottom:100%;
+        content:'';
+        animation:anim2 1s linear ;
+        flex-wrap:wrap;
+        align-content:flex-end;
+        font-size:70pt;
+        animation-fill-mode:forwards;
+      }     
+      .b{right:4%;}
+      .b2{left:4%;}
+
+            @keyframes anim {
+    20%,100% {top:73.3%;right:0% }
+    20% {right:4%;}          
+}
+                  @keyframes anim2 {
+    20%,100% {bottom:73.3%;right:0% }   
+        100% {left:0%;}              
+}
+      
+    </style>
+    <!--<link rel="stylesheet" href="style.css"/>-->
+    <!--<script defer src="script.js"></script>-->
+  </head>
+  <body>
+    <div class="a">
+      <div class ="b">
+        1234
+      </div>
+    </div>
+        <div class="a">
+      <div class ="b2">
+        1234
+      </div>
+    </div>
+  </body>
+</html>
