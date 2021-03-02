@@ -20,7 +20,7 @@ z-index: 1;
     height: 100px;
     left: 26.9%;
     border: 3px solid rgb(255, 0, 0);
-    
+    visibility: visible;
     }
 .text_box{
     display: flex;
@@ -105,7 +105,17 @@ position: relative;
     height: 40px;
     background-color: rgb(252, 162, 44);
 }
-
+.dl_btn{
+    width: 100px;
+    height: 50px;
+    background-color: red;
+display: flex;
+flex-wrap: wrap;
+align-content: center;
+justify-content: center;
+position: absolute;
+z-index: 9999999;
+}
 
 
 

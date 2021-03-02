@@ -10,7 +10,7 @@
 </head>
 
 <body class="body">
-    <div class="trigger">Trigger</div>
+
     <div class="result"></div>
     <div class="log"></div>
 
@@ -61,22 +61,12 @@
         <div class="db_box" onclick="db_text1()"  id="db_box1">Текст</div>
     </div>
 <div class="menu_hide" onclick="menu_hide()" id="menu_hide"></div>
-<link rel="stylesheet" href="https://snipp.ru/cdn/fontawesome/5.11.2/css/all.css">
+<!-- <link rel="stylesheet" href="https://snipp.ru/cdn/fontawesome/5.11.2/css/all.css"> -->
 <script type="text/javascript" src="JS\jquery-3.5.1.min.js"></script> 
 <script type="text/javascript" src="JS\js.js"></script>
 
  <script type="text/javascript" src="JS\jquery-ui.js"></script>
 
- <script>
-    $( document ).ajaxComplete(function() {
-        $( ".log" ).text( "Triggered ajaxComplete handler." );
-      });
-      
-      $( ".trigger" ).click(function() {
-      $( ".result" ).load( "index.html" );
-    });
-    
-      </script>
 </body>
 
 </html>
