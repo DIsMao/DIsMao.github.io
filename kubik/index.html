@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>СПЕРМОТРЯС</title>
+    <style>
+      body, html {
+        min-width: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        font: Arial 14px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css"/>
+    
+  </head>
+  <body>
+    <div class="ya_programist">Я ПРОГРАМИСТ</div>
+    <div class="pole">
+    <div class="container">
+      <div class="back side"></div>
+      <div class="left side"></div>
+      <div class="right side"></div>
+      <div class="top side"></div>
+      <div class="bottom side"></div>
+      <div class="front side"></div>
+  </div>
+
+</div>
+  </body>
+  <div class="inst">
+    <p>Движение:
+      wasd</p>
+
+      <p>Крутиться:
+      Стрелка влево, стрелка в право</p>
+
+      <p>Прыжок:
+      Space</p>
+
+      <p>Насрать:
+      Кнопка вниз
+    </p>
+  </div>
+<script src="jquery-3.6.0.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script >
+
+var rot = 0
+  document.onkeydown = function (e) {
+    var left = $('.container').css("left");
+    var top = $('.container').css("top");
+  
+left = Number(left.replace(/[a-zа-яё]/gi, ''));
+top = Number(top.replace(/[a-zа-яё]/gi, ''));
+
+      switch (e.keyCode) {
+          case 83:
+            // низ
+            $('.container').css("top", top + 10 + "px"); 
+
+              break;
+          case 68:
+            // право
+
+            $('.container').css("left", left + 10 + "px") ; 
+              break;
+          case 65:
+            // лево
+            $('.container').css("left", left - 10 + "px"); 
+              break;
+          case 87:
+            // верх
+            $('.container').css("top", top - 10 + "px"); 
+              break;
+              // --------------------------------------------
+            
+          case 39:
+            // право
+            rot = rot - 5;
+
+            $('.container').css("transform", "translateZ(110px) rotateZ(" + rot + "deg)") ; 
+              break;
+          case 37:
+            // лево
+            rot = rot + 5;
+            $('.container').css("transform", "translateZ(110px) rotateZ(" + rot + "deg)"); 
+              break;
+              case 32:
+            // прыжок
+            $('.container').css("transition-duration","220ms") ;
+            $('.container').css("transform", "translateZ(260px) rotateZ(" + rot + "deg)") ; 
+            setTimeout(function(){
+              $('.container').css("transform", "translateZ(110px) rotateZ(" + rot + "deg)") ;
+              setTimeout(function(){
+              $('.container').css("transition-duration","0ms") ;
+            }, 220);
+}, 220);
+break;
+case 40:
+            // насрать
+            document.querySelector(".pole").insertAdjacentHTML('beforeend', '<img class="kakashka" style = "top:' + top + 'px; left:' + left + 'px" src="poop (1).png">');
+              break;
+
+            
+
+              default:
+        console.log(e.keyCode);
+      }
+  };
+  
+  
+  
+  
+  
+    </script>
+</html>

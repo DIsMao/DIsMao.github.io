@@ -1,0 +1,124 @@
+HTML, BODY {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+BODY {
+display: flex;
+justify-content: center;
+align-items: center;
+perspective: 1000px;
+perspective-origin: center center;
+background-image: url(1612726571_46-p-krasivie-golubie-foni-neba-55.jpg);
+overflow: hidden;
+}
+
+.side,
+.container {
+  width: 100px;
+  height: 100px;
+  
+}
+.side {
+  position: absolute;
+  border: 1px solid orange;
+  opacity: .7;
+  }
+
+.container {
+  border: 2px dotted silver;
+  transform-style: preserve-3d;
+  animation: rotate 10s infinite linear;
+  transform: translateZ(110px);
+  position: absolute;
+  top: 551px;
+  left: 551px;
+
+  }
+  /* @keyframes rotate {
+    100% {
+      transform: translateZ(60px) rotateX(360deg) rotateY(360deg);
+    }
+  } */
+
+  
+  .back {
+    transform: translateZ(-100px);
+    background: orange;
+    }
+.left {
+  transform: translateX(-100px) rotateY(90deg);
+  background: lightgreen;
+  width: 200px;
+  }
+
+.right {
+  transform: translateX(0px) rotateY(90deg);
+  background: yellowgreen;
+    width: 200px;
+  }
+.top {
+  transform: translateY(-100px) rotateX(90deg);
+  background: rgb(208, 144, 238);
+  height: 200px;  
+}
+
+.bottom {
+  transform: translateY(0px) rotateX(270deg);
+  background: rgb(50, 205, 205);
+  height: 200px;
+  background-image: url(png-transparent-t-shirt-youtube-graphic-designer-internet-meme-logo-suprise-mammal-hand-logo.png);
+  background-size: 100% 100%;
+  
+  }
+.front {
+  transform: translateZ(100px);
+  background: rgb(205, 50, 50);
+  
+}
+
+.pole{
+  width: 12000px;
+  height: 2000px;
+  background-color: rgb(126, 126, 126);
+  perspective: 1000px;
+perspective-origin: center center;
+transform-style: preserve-3d;
+transform: rotateX(74deg);
+background-image: url(grass-bg-044.jpg);
+}
+
+.kakashka {
+  width: 50px;
+  height: 50px;
+
+  transform-style: preserve-3d;
+  transform: translateZ(30px) rotateX(-90deg) ;
+  position: absolute;
+  top: 551px;
+  left: 551px;
+
+  }
+.inst{
+  display: flex;
+  width: 200px;
+  background-color: antiquewhite;
+  border: solid black;
+  position: fixed;
+  top: 100px;
+  right: 100px;
+  padding-left: 10px;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.ya_programist{
+  top: 100px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+
+  position: fixed;
+  font-size: 100px;
+  color: yellow;
+
+}
