@@ -12,7 +12,7 @@
 		<atom:link href="https://dismao.github.io/rss.xml" rel="self" type="application/rss+xml"/>
 						<item>
 			<title>RSS Tutorial 2</title>
-			<link>https://dismao.github.io/</link>
+			<link>https://dismao.github.io/1</link>
 			<description>
 				<![CDATA[
                 <p>weqeqweqweqweqweqweqwe</p>
@@ -24,7 +24,7 @@
 		</item>
 				<item>
 			<title>RSS Tutorial</title>
-			<link>https://dismao.github.io/</link>
+			<link>https://dismao.github.io/2</link>
 			<description>
 				<![CDATA[
                 <p>New RSS tutorial on Snipp.ru</p>
@@ -36,7 +36,7 @@
 		</item>
 		<item>
 			<title>RSS Tutorial</title>
-			<link>https://dismao.github.io/</link>
+			<link>https://dismao.github.io/3</link>
 			<description>
 				<![CDATA[
                 <p>New RSS tutorial on Snipp.ru</p>
