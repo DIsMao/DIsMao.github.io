@@ -8,6 +8,18 @@
 			<title>Название канала</title>
 			<link>https://dismao.github.io/</link>
 		</image>
+				<item>
+			<title>RSS Tutorial</title>
+			<link>https://dismao.github.io/</link>
+			<description>
+				<![CDATA[
+                <p>New RSS tutorial on Snipp.ru</p>
+				]]>
+			</description>
+			<category>PHP</category>
+			<guid>5</guid>
+			<pubDate>Thu, 08 Sep 16 17:00:00 +0300</pubDate>
+		</item>
 		<item>
 			<title>RSS Tutorial</title>
 			<link>https://dismao.github.io/</link>
