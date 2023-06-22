@@ -18,7 +18,7 @@
 				]]>
 			</description>
 			<category>eqweqwe</category>
-			<guid>16</guid>
+			<guid isPermaLink="false">16</guid>
 			<pubDate>Thu, 08 Sep 22 20:00:00 +0300</pubDate>
 		</item>
 				<item>
@@ -30,7 +30,7 @@
 				]]>
 			</description>
 			<category>PHP</category>
-			<guid>6</guid>
+			<guid isPermaLink="false">6</guid>
 			<pubDate>Thu, 08 Sep 16 20:00:00 +0300</pubDate>
 		</item>
 		<item>
@@ -42,7 +42,7 @@
 				]]>
 			</description>
 			<category>PHP</category>
-			<guid>5</guid>
+			<guid isPermaLink="false">5</guid>
 			<pubDate>Thu, 08 Sep 16 17:00:00 +0300</pubDate>
 		</item>
 	</channel>        
