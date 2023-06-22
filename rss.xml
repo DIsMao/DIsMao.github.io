@@ -22,5 +22,17 @@
 			<guid>5</guid>
 			<pubDate>Thu, 08 Sep 16 17:00:00 +0300</pubDate>
 		</item>
+				<item>
+			<title>RSS Tutorial2222</title>
+			<link>http://site.ru/articles/222</link>
+			<description>
+				<![CDATA[
+                <p>New RSS tutorial on 265165</p>
+				]]>
+			</description>
+			<category>PHP</category>
+			<guid>9</guid>
+			<pubDate>Thu, 09 Sep 19 19:00:00 +0300</pubDate>
+		</item>
 	</channel>        
 </rss>
