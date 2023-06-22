@@ -8,7 +8,16 @@
           <title>Название RSS-канала</title>
           <link>https://dismao.github.io/</link>
           <description>Описание канала (кратко)</description>
-          
+
+          <item>
+            <title>$title2</title>
+            <link>ссылка на статью</link>
+            <description>$text2</description>
+            <author>$author</author>
+            <pubDate>Thu, 23 Jun 2023 12:22:18 GMT</pubDate>
+            <guid>2</guid>
+         </item>
+             
           <item>
             <title>$title</title>
             <link>ссылка на статью</link>
